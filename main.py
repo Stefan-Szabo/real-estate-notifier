@@ -1,8 +1,6 @@
 import requests
 import json
 import os
-import time
-from notifier.telegram import send_telegram_message
 
 PENDING_FILE = "data/pending.json"
 SEEN_FILE = "data/seen.json"
@@ -32,7 +30,7 @@ def fetch_ads():
     )
 
     all_items = []
-    for page in range(1, 5):  # paginile 1 până la 4
+    for page in range(1, 5):
         url = base_url + f"&page={page}" if page > 1 else base_url
         print(f"📦 Fetching page {page}...")
         try:
@@ -50,11 +48,6 @@ def fetch_ads():
 
     print(f"✅ Total anunțuri preluate: {len(all_items)}")
     return all_items
-
-
-def chunk_list(lst, size):
-    for i in range(0, len(lst), size):
-        yield lst[i:i + size]
 
 def main():
     seen = load_json(SEEN_FILE)
@@ -97,37 +90,7 @@ def main():
     save_json(PENDING_FILE, pending)
     save_json(SEEN_FILE, seen)
 
-    # Trimite anunțurile pe Telegram grupate câte 15
-    # Debug: arată exact ce va fi trimis, grupat corect
-    for group in chunk_list(added_ads, 15):
-        print("📤 Urmează să trimită pe Telegram următorul grup de anunțuri:\n")
-        for ad in group:
-            camere = ad.get("rooms", "N/A")
-            suprafata = ad.get("area", "N/A")
-            teren = ad.get("terrain", "N/A")
-            price = ad.get("price", "N/A")
-            link = ad["link"]
-            print(f"🏠 camere {camere} - {price} EUR, casa {suprafata}, teren {teren}\n{link}\n")
-
-
-    # Trimite anunțurile pe Telegram grupate câte 15
-    for group in chunk_list(added_ads, 15):
-        lines = []
-        for ad in group:
-            camere = ad.get("rooms", "N/A")
-            suprafata = ad.get("area", "N/A")
-            teren = ad.get("terrain", "N/A")
-            price = ad.get("price", "N/A")
-            link = ad["link"]
-            lines.append(f"🏠 camere {camere} - {price} EUR, casa {suprafata}, teren {teren}\n{link}")
-        msg = "\n\n".join(lines)
-        send_telegram_message(msg)
-        time.sleep(0.5)  # opțional anti-spam
-
-    # Trimite link-ul către interfață
-    send_telegram_message("🔎 Vezi toate anunțurile în așteptare:\nhttps://stefan-szabo.github.io/real-estate-notifier/")
-
-    print(f"{len(added_ads)} anunțuri noi adăugate în pending.")
+    print(f"✅ {len(added_ads)} anunțuri noi adăugate în pending. Notificările vor fi trimise de workflow-ul `notify.yml`.")
 
 if __name__ == "__main__":
     main()

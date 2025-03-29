@@ -1,3 +1,4 @@
+### .github/workflows/check.yml
 name: Check for new listings
 
 on:
@@ -7,13 +8,14 @@ on:
 
 permissions:
   contents: write
-  
+
 jobs:
   check-listings:
     runs-on: ubuntu-latest
     env:
-        TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
     steps:
       - uses: actions/checkout@v3
 
@@ -27,17 +29,28 @@ jobs:
 
       - name: Export Telegram secrets
         run: |
-            echo "TELEGRAM_TOKEN=${{ secrets.TELEGRAM_TOKEN }}" >> $GITHUB_ENV
-            echo "TELEGRAM_CHAT_ID=${{ secrets.TELEGRAM_CHAT_ID }}" >> $GITHUB_ENV
-
+          echo "TELEGRAM_TOKEN=${{ secrets.TELEGRAM_TOKEN }}" >> $GITHUB_ENV
+          echo "TELEGRAM_CHAT_ID=${{ secrets.TELEGRAM_CHAT_ID }}" >> $GITHUB_ENV
 
       - name: Run checker
         run: python main.py
+
+      - name: Update last updated timestamp
+        run: |
+          echo "{\"last_updated\": \"$(date -u +\"%Y-%m-%dT%H:%M:%SZ\")\"}" > data/last_updated.json
 
       - name: Commit updates (if needed)
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add data/
-          git commit -m "update pending.json and seen.json" || echo "No changes"
+          git commit -m "update pending.json, seen.json, and timestamp" || echo "No changes"
           git push
+
+      - name: Trigger GitHub Pages rebuild
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          event-type: trigger-pages-rebuild
+
+          

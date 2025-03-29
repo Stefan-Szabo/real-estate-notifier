@@ -1,0 +1,31 @@
+name: Notify via Telegram
+
+on:
+  workflow_run:
+    workflows: ["Check for new listings"]
+    types:
+      - completed
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    env:
+      TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run Telegram notifier
+        run: python notify.py
