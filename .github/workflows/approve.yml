@@ -42,3 +42,9 @@ jobs:
           git add data/
           git commit -m "Update approved/rejected/pending" || echo "No changes"
           git push
+
+      - name: Trigger GitHub Pages rebuild
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          event-type: trigger-pages-rebuild
