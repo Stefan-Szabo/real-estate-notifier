@@ -1,11 +1,14 @@
-name: Approve Listings
+name: Approve or Reject Listings
 
 on:
   repository_dispatch:
-    types: [approve-listings]
+    types: [approve-listings, reject-listings]
+
+permissions:
+  contents: write
 
 jobs:
-  approve:
+  handle-action:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -13,17 +16,29 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.x"
+          python-version: "3.10"
 
-      - name: Run approval script
+      # - name: Install Python deps
+      #   run: pip install --quiet
+
+      - name: Extract payload
         run: |
-          pip install requests
-          python approve.py '${{ github.event.client_payload.ids }}'
+          echo 'EVENT_PAYLOAD<<EOF' >> $GITHUB_ENV
+          echo '${{ toJson(github.event.client_payload) }}' >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
 
-      - name: Commit updated files
+      - name: Approve listings
+        if: github.event.action == 'approve-listings'
+        run: python approve.py
+
+      - name: Reject listings
+        if: github.event.action == 'reject-listings'
+        run: python reject.py
+
+      - name: Commit changes
         run: |
           git config user.name github-actions
           git config user.email actions@github.com
           git add data/
-          git commit -m "Moved approved listings"
+          git commit -m "Update approved/rejected/pending" || echo "No changes"
           git push

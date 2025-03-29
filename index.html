@@ -4,48 +4,123 @@
   <meta charset="UTF-8">
   <title>Anunțuri de aprobat</title>
   <style>
-    body { font-family: sans-serif; max-width: 700px; margin: 40px auto; }
+    body { font-family: sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; }
+    h1, h2 { margin-bottom: 10px; }
     li { margin-bottom: 10px; }
-    button { padding: 10px 20px; margin-top: 20px; }
+    .topbar { display: flex; justify-content: space-between; align-items: center; }
+    button { padding: 8px 14px; margin: 5px; cursor: pointer; }
+    .controls { margin-top: 20px; }
+    label { cursor: pointer; }
+    .section { margin-top: 40px; }
+    .approved-item { margin-bottom: 12px; }
   </style>
 </head>
 <body>
-  <h1>Anunțuri de aprobat</h1>
+  <div class="topbar">
+    <h1>Anunțuri de aprobat</h1>
+    <button onclick="logout()">Logout</button>
+  </div>
+
   <ul id="ads-list"></ul>
-  <button onclick="approveSelected()">Aprobă selecția</button>
+
+  <div class="controls">
+    <button onclick="approveSelected()">✅ Aprobă selecția</button>
+    <button onclick="rejectSelected()">❌ Respinge selecția</button>
+  </div>
+
+  <div class="section">
+    <h2>Anunțuri aprobate</h2>
+    <div id="approved-list">🔄 Se încarcă...</div>
+  </div>
 
   <script>
     const adsList = document.getElementById("ads-list");
-    const rawUrl = "https://raw.githubusercontent.com/USERNAME/REPO_NAME/main/data/pending.json";
-    const approveUrl = "https://api.github.com/repos/USERNAME/REPO_NAME/dispatches";
+    const approvedList = document.getElementById("approved-list");
 
-    async function loadPending() {
-      const res = await fetch(rawUrl);
-      const ads = await res.json();
+    const USERNAME = "stefan-szabo";
+    const REPO = "real-estate-notifier";
 
-      ads.forEach(ad => {
-        const li = document.createElement("li");
-        li.innerHTML = `
-          <input type="checkbox" data-id="${ad.id}">
-          <a href="${ad.link}" target="_blank">${ad.title} (${ad.price} EUR - ${ad.location})</a>
-        `;
-        adsList.appendChild(li);
-      });
+    const rawUrl = (file) => `https://raw.githubusercontent.com/${USERNAME}/${REPO}/main/data/${file}`;
+    const dispatchUrl = `https://api.github.com/repos/${USERNAME}/${REPO}/dispatches`;
+
+    function getToken() {
+      let token = localStorage.getItem("gh_token");
+      if (!token) {
+        token = prompt("Introdu GitHub Personal Access Token:");
+        if (token) localStorage.setItem("gh_token", token);
+      }
+      return token;
     }
 
-    async function approveSelected() {
-      const selected = Array.from(document.querySelectorAll("input[type=checkbox]:checked"));
-      if (selected.length === 0) return alert("N-ai bifat nimic!");
+    function logout() {
+      localStorage.removeItem("gh_token");
+      alert("Token șters. Te rugăm să reîncarci.");
+      location.reload();
+    }
 
-      const selectedIds = selected.map(el => el.dataset.id);
-      const token = prompt("Introdu tokenul GitHub Personal Access Token pentru aprobare:");
+    async function loadPending() {
+      try {
+        const res = await fetch(rawUrl("pending.json"));
+        const ads = await res.json();
+
+        if (!ads.length) {
+          adsList.innerHTML = "<p>🎉 Nu există anunțuri în așteptare.</p>";
+          return;
+        }
+
+        ads.forEach(ad => {
+          const li = document.createElement("li");
+          li.innerHTML = `
+            <label>
+              <input type="checkbox" data-id="${ad.id}">
+              <strong>${ad.title}</strong> - ${ad.price} EUR - ${ad.location}<br>
+              <a href="${ad.link}" target="_blank">${ad.link}</a>
+            </label>
+          `;
+          adsList.appendChild(li);
+        });
+      } catch (err) {
+        adsList.innerHTML = "<p>⚠️ Eroare la încărcarea anunțurilor.</p>";
+        console.error(err);
+      }
+    }
+
+    async function loadApproved() {
+      try {
+        const res = await fetch(rawUrl("approved.json"));
+        const ads = await res.json();
+
+        if (!ads.length) {
+          approvedList.innerHTML = "<p>❌ Niciun anunț aprobat.</p>";
+          return;
+        }
+
+        approvedList.innerHTML = "";
+        ads.forEach(ad => {
+          const div = document.createElement("div");
+          const camere = ad.rooms || "N/A";
+          const suprafata = ad.area || "N/A";
+          const teren = ad.terrain || "N/A";
+          div.className = "approved-item";
+          div.innerHTML = `🏠 camere ${camere} - ${ad.price} EUR, casa ${suprafata}, teren ${teren}<br><a href="${ad.link}" target="_blank">${ad.link}</a>`;
+          approvedList.appendChild(div);
+        });
+      } catch (err) {
+        approvedList.innerHTML = "<p>⚠️ Eroare la încărcarea celor aprobate.</p>";
+        console.error(err);
+      }
+    }
+
+    async function sendDispatch(eventType, ids) {
+      const token = getToken();
+      if (!token) return alert("Tokenul este necesar.");
 
       const payload = {
-        event_type: "approve-listings",
-        client_payload: { ids: selectedIds }
+        event_type: eventType,
+        client_payload: { ids }
       };
 
-      const res = await fetch(approveUrl, {
+      const res = await fetch(dispatchUrl, {
         method: "POST",
         headers: {
           "Authorization": `Bearer ${token}`,
@@ -56,13 +131,33 @@
       });
 
       if (res.ok) {
-        alert("Anunțurile au fost trimise pentru aprobare!");
+        alert(`${eventType === "approve-listings" ? "Aprobate" : "Respinse"} cu succes!`);
+        location.reload();
       } else {
-        alert("Ceva n-a mers bine: " + res.statusText);
+        alert("Eroare la trimiterea acțiunii: " + res.statusText);
+        console.error(await res.text());
       }
     }
 
+    function getSelectedIds() {
+      return Array.from(document.querySelectorAll("input[type=checkbox]:checked"))
+                  .map(el => el.dataset.id);
+    }
+
+    function approveSelected() {
+      const ids = getSelectedIds();
+      if (!ids.length) return alert("Selectează cel puțin un anunț.");
+      sendDispatch("approve-listings", ids);
+    }
+
+    function rejectSelected() {
+      const ids = getSelectedIds();
+      if (!ids.length) return alert("Selectează cel puțin un anunț.");
+      sendDispatch("reject-listings", ids);
+    }
+
     loadPending();
+    loadApproved();
   </script>
 </body>
 </html>
