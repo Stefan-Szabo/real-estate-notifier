@@ -9,5 +9,16 @@
     "rooms": "FIVE",
     "area": 134,
     "terrain": 508
+  },
+  {
+    "id": 9265605,
+    "slug": "casa-individuala-de-vanzare-teren-491-mp-zona-apahida-IDCSpf",
+    "title": "Casa individuala de vanzare, teren 491 mp, zona Apahida",
+    "price": 135000,
+    "location": "Apahida",
+    "link": "https://www.storia.ro/ro/oferta/casa-individuala-de-vanzare-teren-491-mp-zona-apahida-IDCSpf",
+    "rooms": "FOUR",
+    "area": 160,
+    "terrain": 491
   }
 ]
