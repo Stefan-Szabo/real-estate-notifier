@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Anunțuri de aprobat</title>
+  <style>
+    body { font-family: sans-serif; max-width: 700px; margin: 40px auto; }
+    li { margin-bottom: 10px; }
+    button { padding: 10px 20px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Anunțuri de aprobat</h1>
+  <ul id="ads-list"></ul>
+  <button onclick="approveSelected()">Aprobă selecția</button>
+
+  <script>
+    const adsList = document.getElementById("ads-list");
+    const rawUrl = "https://raw.githubusercontent.com/USERNAME/REPO_NAME/main/data/pending.json";
+    const approveUrl = "https://api.github.com/repos/USERNAME/REPO_NAME/dispatches";
+
+    async function loadPending() {
+      const res = await fetch(rawUrl);
+      const ads = await res.json();
+
+      ads.forEach(ad => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+          <input type="checkbox" data-id="${ad.id}">
+          <a href="${ad.link}" target="_blank">${ad.title} (${ad.price} EUR - ${ad.location})</a>
+        `;
+        adsList.appendChild(li);
+      });
+    }
+
+    async function approveSelected() {
+      const selected = Array.from(document.querySelectorAll("input[type=checkbox]:checked"));
+      if (selected.length === 0) return alert("N-ai bifat nimic!");
+
+      const selectedIds = selected.map(el => el.dataset.id);
+      const token = prompt("Introdu tokenul GitHub Personal Access Token pentru aprobare:");
+
+      const payload = {
+        event_type: "approve-listings",
+        client_payload: { ids: selectedIds }
+      };
+
+      const res = await fetch(approveUrl, {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${token}`,
+          "Accept": "application/vnd.github.everest-preview+json",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (res.ok) {
+        alert("Anunțurile au fost trimise pentru aprobare!");
+      } else {
+        alert("Ceva n-a mers bine: " + res.statusText);
+      }
+    }
+
+    loadPending();
+  </script>
+</body>
+</html>

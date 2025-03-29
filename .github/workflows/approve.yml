@@ -1,0 +1,29 @@
+name: Approve Listings
+
+on:
+  repository_dispatch:
+    types: [approve-listings]
+
+jobs:
+  approve:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Run approval script
+        run: |
+          pip install requests
+          python approve.py '${{ github.event.client_payload.ids }}'
+
+      - name: Commit updated files
+        run: |
+          git config user.name github-actions
+          git config user.email actions@github.com
+          git add data/
+          git commit -m "Moved approved listings"
+          git push
