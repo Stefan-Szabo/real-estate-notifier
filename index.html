@@ -60,15 +60,23 @@
 
     async function loadPending() {
       try {
-        const res = await fetch(rawUrl("pending.json"));
-        const ads = await res.json();
+        const [pendingRes, rejectedRes] = await Promise.all([
+          fetch(rawUrl("pending.json")),
+          fetch(rawUrl("rejected.json"))
+        ]);
 
-        if (!ads.length) {
+        const pending = await pendingRes.json();
+        const rejected = await rejectedRes.json();
+        const rejectedIds = new Set(rejected.map(ad => ad.id));
+
+        const visibleAds = pending.filter(ad => !rejectedIds.has(ad.id));
+
+        if (!visibleAds.length) {
           adsList.innerHTML = "<p>🎉 Nu există anunțuri în așteptare.</p>";
           return;
         }
 
-        ads.forEach(ad => {
+        visibleAds.forEach(ad => {
           const li = document.createElement("li");
           li.innerHTML = `
             <label>
