@@ -90,6 +90,9 @@ def main():
     save_json(PENDING_FILE, pending)
     save_json(SEEN_FILE, seen)
 
+    with open("data/last_batch.json", "w", encoding="utf-8") as f:
+        json.dump(added_ads, f, ensure_ascii=False, indent=2)
+
     print(f"✅ {len(added_ads)} anunțuri noi adăugate în pending. Notificările vor fi trimise de workflow-ul `notify.yml`.")
 
 if __name__ == "__main__":
