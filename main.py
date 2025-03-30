@@ -6,6 +6,7 @@ PENDING_FILE = "data/pending.json"
 SEEN_FILE = "data/seen.json"
 APPROVED_FILE = "data/approved.json"
 REJECTED_FILE = "data/rejected.json"
+LAST_BATCH_FILE = "data/last_batch.json"
 
 def load_json(path):
     if os.path.exists(path):
@@ -76,6 +77,7 @@ def main():
 
     if not new_ads:
         print("Niciun anunț nou.")
+        save_json(LAST_BATCH_FILE, [])
         return
 
     added_ads = []
@@ -98,9 +100,7 @@ def main():
 
     save_json(PENDING_FILE, pending)
     save_json(SEEN_FILE, seen)
-
-    with open("data/last_batch.json", "w", encoding="utf-8") as f:
-        json.dump(added_ads, f, ensure_ascii=False, indent=2)
+    save_json(LAST_BATCH_FILE, added_ads)
 
     print(f"✅ {len(added_ads)} anunțuri noi adăugate în pending. Notificările vor fi trimise de workflow-ul `notify.yml`.")
 

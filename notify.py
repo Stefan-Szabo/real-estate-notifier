@@ -34,7 +34,7 @@ def main():
     new_ads = load_json(LAST_BATCH_FILE)
 
     if not new_ads:
-        print("Nimic nou de notificat.")
+        print("⚠️ last_batch.json este gol. Nicio notificare nu va fi trimisă.")
         return
 
     print(f"📤 Trimit notificări pentru {len(new_ads)} anunțuri...")
@@ -42,15 +42,19 @@ def main():
     for group in chunk_list(new_ads, 15):
         lines = []
         for ad in group:
+            if not ad.get("id") or not ad.get("link"):
+                continue  # evită anunțuri incomplete
+
             camere = ad.get("rooms", "N/A")
             suprafata = ad.get("area", "N/A")
             teren = ad.get("terrain", "N/A")
             price = ad.get("price", "N/A")
             link = ad["link"]
             lines.append(f"🏠 camere {camere} - {price} EUR, casa {suprafata}, teren {teren}\n{link}")
-        msg = "\n\n".join(lines)
-        send_telegram_message(msg)
-        time.sleep(0.5)
+        if lines:
+            msg = "\n\n".join(lines)
+            send_telegram_message(msg)
+            time.sleep(0.5)
 
     send_telegram_message("🔎 Vezi toate anunțurile în așteptare:\nhttps://stefan-szabo.github.io/real-estate-notifier/")
 
