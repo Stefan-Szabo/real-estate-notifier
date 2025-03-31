@@ -20,7 +20,7 @@ def save_json(path, data):
 
 def fetch_ads():
     base_url = (
-        "https://www.storia.ro/_next/data/3u3hHU0nNRYVLf1ouaBJL/ro/rezultate/vanzare/casa/cluj/apahida.json?ownerTypeSingleSelect=ALL&distanceRadius=15&roomsNumber=%5BTHREE%2CFOUR%2CFIVE%2CSIX_OR_MORE%5D&priceMax=180000&areaMin=100&terrainAreaMin=350&buildYearMin=2010&by=PRICE&direction=ASC&viewType=listing&searchingCriteria=vanzare&searchingCriteria=casa&searchingCriteria=cluj&searchingCriteria=apahida"
+        "https://www.storia.ro/_next/data/3u3hHU0nNRYVLf1ouaBJL/ro/rezultate/vanzare/casa/cluj/apahida.json?distanceRadius=15&limit=72&ownerTypeSingleSelect=ALL&priceMax=180000&areaMin=100&terrainAreaMin=350&buildYearMin=2010&roomsNumber=%5BTHREE%2CFOUR%2CFIVE%2CSIX_OR_MORE%5D&by=PRICE&direction=ASC&viewType=listing&searchingCriteria=vanzare&searchingCriteria=casa&searchingCriteria=cluj&searchingCriteria=apahida"
     )
 
     all_items = []
