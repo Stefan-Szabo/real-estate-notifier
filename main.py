@@ -18,9 +18,51 @@ def save_json(path, data):
     with open(path, "w") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
+def get_build_id():
+    url = "https://www.storia.ro/ro/rezultate/vanzare/casa/cluj/apahida"
+    print("🔍 Obțin buildId din pagina principală...")
+    try:
+        res = requests.get(url, headers={"User-Agent": "Mozilla/5.0"})
+        res.raise_for_status()
+        html = res.text
+        start = html.find('<script id="__NEXT_DATA__" type="application/json">')
+        if start == -1:
+            raise Exception("Nu am găsit script-ul __NEXT_DATA__")
+
+        start = html.find('>', start) + 1
+        end = html.find('</script>', start)
+        json_str = html[start:end]
+        data = json.loads(json_str)
+
+        build_id = data.get("buildId")
+        if not build_id:
+            raise Exception("Nu am putut extrage buildId.")
+        print(f"✅ buildId extras: {build_id}")
+        return build_id
+    except Exception as e:
+        print("❌ Eroare la obținerea buildId:", e)
+        raise
+
 def fetch_ads():
+    build_id = get_build_id()
     base_url = (
-        "https://www.storia.ro/_next/data/3u3hHU0nNRYVLf1ouaBJL/ro/rezultate/vanzare/casa/cluj/apahida.json?distanceRadius=15&limit=72&ownerTypeSingleSelect=ALL&priceMax=180000&areaMin=100&terrainAreaMin=350&buildYearMin=2010&roomsNumber=%5BTHREE%2CFOUR%2CFIVE%2CSIX_OR_MORE%5D&by=PRICE&direction=ASC&viewType=listing&searchingCriteria=vanzare&searchingCriteria=casa&searchingCriteria=cluj&searchingCriteria=apahida"
+        f"https://www.storia.ro/_next/data/{build_id}"
+        "/ro/rezultate/vanzare/casa/cluj/apahida.json"
+        "?distanceRadius=15"
+        "&limit=72"
+        "&ownerTypeSingleSelect=ALL"
+        "&priceMax=180000"
+        "&areaMin=100"
+        "&terrainAreaMin=350"
+        "&buildYearMin=2010"
+        "&roomsNumber=%5BTHREE%2CFOUR%2CFIVE%2CSIX_OR_MORE%5D"
+        "&by=PRICE"
+        "&direction=ASC"
+        "&viewType=listing"
+        "&searchingCriteria=vanzare"
+        "&searchingCriteria=casa"
+        "&searchingCriteria=cluj"
+        "&searchingCriteria=apahida"
     )
 
     all_items = []
