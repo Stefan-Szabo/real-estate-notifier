@@ -20,28 +20,13 @@ def save_json(path, data):
 
 def get_build_id():
     url = "https://www.storia.ro/ro/rezultate/vanzare/casa/cluj/apahida"
-    print("🔍 Obțin buildId din pagina principală...")
-    try:
-        res = requests.get(url, headers={"User-Agent": "Mozilla/5.0"})
-        res.raise_for_status()
-        html = res.text
-        start = html.find('<script id="__NEXT_DATA__" type="application/json">')
-        if start == -1:
-            raise Exception("Nu am găsit script-ul __NEXT_DATA__")
-
-        start = html.find('>', start) + 1
-        end = html.find('</script>', start)
-        json_str = html[start:end]
-        data = json.loads(json_str)
-
-        build_id = data.get("buildId")
-        if not build_id:
-            raise Exception("Nu am putut extrage buildId.")
-        print(f"✅ buildId extras: {build_id}")
-        return build_id
-    except Exception as e:
-        print("❌ Eroare la obținerea buildId:", e)
-        raise
+    headers = {"User-Agent": "Mozilla/5.0"}
+    res = requests.get(url, headers=headers)
+    res.raise_for_status()
+    match = re.search(r'"buildId":"(.*?)"', res.text)
+    if match:
+        return match.group(1)
+    raise ValueError("❌ Nu am putut extrage buildId din pagina Storia.")
 
 def fetch_ads():
     build_id = get_build_id()
