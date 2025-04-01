@@ -1,6 +1,7 @@
 import requests
 import json
 import os
+import re
 
 PENDING_FILE = "data/pending.json"
 SEEN_FILE = "data/seen.json"
