@@ -74,6 +74,7 @@
       const rejectedFile = type === "house" ? "rejected.json" : "apartments_rejected.json";
 
       try {
+        console.log(`📥 Fetching pending for ${type}`);
         const [pendingRes, rejectedRes] = await Promise.all([
           fetch(rawUrl(pendingFile)),
           fetch(rawUrl(rejectedFile))
@@ -81,14 +82,21 @@
 
         const pending = await pendingRes.json();
         const rejected = await rejectedRes.json();
+
+        console.log(`📄 ${type} pending:`, pending);
+        console.log(`🚫 ${type} rejected:`, rejected);
+
         const rejectedIds = new Set(rejected.map(ad => ad.id));
         const visibleAds = pending.filter(ad => !rejectedIds.has(ad.id));
+
+        console.log(`👀 ${type} visibleAds:`, visibleAds);
 
         if (!visibleAds.length) {
           listEl.innerHTML = "<p>🎉 Nicio proprietate în așteptare.</p>";
           return;
         }
 
+        listEl.innerHTML = ""; // 🔥 important
         visibleAds.forEach(ad => {
           const li = document.createElement("li");
           li.innerHTML = `
@@ -102,7 +110,7 @@
         });
       } catch (err) {
         listEl.innerHTML = "<p>⚠️ Eroare la încărcare.</p>";
-        console.error(err);
+        console.error(`❌ Eroare la pending ${type}:`, err);
       }
     }
 
@@ -111,15 +119,18 @@
       const file = type === "house" ? "approved.json" : "apartments_approved.json";
 
       try {
+        console.log(`📥 Fetching approved for ${type}`);
         const res = await fetch(rawUrl(file));
         const ads = await res.json();
+
+        console.log(`✅ ${type} approved:`, ads);
 
         if (!ads.length) {
           listEl.innerHTML = "<p>❌ Nicio proprietate aprobată.</p>";
           return;
         }
 
-        listEl.innerHTML = "";
+        listEl.innerHTML = ""; // 🔥 important
         ads.forEach(ad => {
           const camere = ad.rooms || "N/A";
           const suprafata = ad.area || "N/A";
@@ -131,9 +142,10 @@
         });
       } catch (err) {
         listEl.innerHTML = "<p>⚠️ Eroare la încărcare.</p>";
-        console.error(err);
+        console.error(`❌ Eroare la approved ${type}:`, err);
       }
     }
+
 
     function getSelectedIds(type) {
       return Array.from(document.querySelectorAll(`input[data-type="${type}"]:checked`)).map(el => el.dataset.id);
