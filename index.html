@@ -25,25 +25,25 @@
     <!-- Case -->
     <div class="column">
       <h2>🏠 Case în așteptare</h2>
-      <ul id="ads-list-houses"></ul>
+      <ul id="ads-list-house"></ul>
       <div class="controls">
         <button onclick="approveSelected('house')">✅ Aprobă selecția</button>
         <button onclick="rejectSelected('house')">❌ Respinge selecția</button>
       </div>
       <h3>✅ Case aprobate</h3>
-      <div id="approved-list-houses">🔄 Se încarcă...</div>
+      <div id="approved-list-house">🔄 Se încarcă...</div>
     </div>
 
     <!-- Apartamente -->
     <div class="column">
       <h2>🏢 Apartamente în așteptare</h2>
-      <ul id="ads-list-apartments"></ul>
+      <ul id="ads-list-apartment"></ul>
       <div class="controls">
         <button onclick="approveSelected('apartment')">✅ Aprobă selecția</button>
         <button onclick="rejectSelected('apartment')">❌ Respinge selecția</button>
       </div>
       <h3>✅ Apartamente aprobate</h3>
-      <div id="approved-list-apartments">🔄 Se încarcă...</div>
+      <div id="approved-list-apartment">🔄 Se încarcă...</div>
     </div>
   </div>
 
@@ -74,7 +74,6 @@
       const rejectedFile = type === "house" ? "rejected.json" : "apartments_rejected.json";
 
       try {
-        console.log(`📥 Fetching pending for ${type}`);
         const [pendingRes, rejectedRes] = await Promise.all([
           fetch(rawUrl(pendingFile)),
           fetch(rawUrl(rejectedFile))
@@ -83,20 +82,15 @@
         const pending = await pendingRes.json();
         const rejected = await rejectedRes.json();
 
-        console.log(`📄 ${type} pending:`, pending);
-        console.log(`🚫 ${type} rejected:`, rejected);
-
         const rejectedIds = new Set(rejected.map(ad => ad.id));
         const visibleAds = pending.filter(ad => !rejectedIds.has(ad.id));
-
-        console.log(`👀 ${type} visibleAds:`, visibleAds);
 
         if (!visibleAds.length) {
           listEl.innerHTML = "<p>🎉 Nicio proprietate în așteptare.</p>";
           return;
         }
 
-        listEl.innerHTML = ""; // 🔥 important
+        listEl.innerHTML = "";
         visibleAds.forEach(ad => {
           const li = document.createElement("li");
           li.innerHTML = `
@@ -119,18 +113,15 @@
       const file = type === "house" ? "approved.json" : "apartments_approved.json";
 
       try {
-        console.log(`📥 Fetching approved for ${type}`);
         const res = await fetch(rawUrl(file));
         const ads = await res.json();
-
-        console.log(`✅ ${type} approved:`, ads);
 
         if (!ads.length) {
           listEl.innerHTML = "<p>❌ Nicio proprietate aprobată.</p>";
           return;
         }
 
-        listEl.innerHTML = ""; // 🔥 important
+        listEl.innerHTML = "";
         ads.forEach(ad => {
           const camere = ad.rooms || "N/A";
           const suprafata = ad.area || "N/A";
@@ -145,7 +136,6 @@
         console.error(`❌ Eroare la approved ${type}:`, err);
       }
     }
-
 
     function getSelectedIds(type) {
       return Array.from(document.querySelectorAll(`input[data-type="${type}"]:checked`)).map(el => el.dataset.id);
