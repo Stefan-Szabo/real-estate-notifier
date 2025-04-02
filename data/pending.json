@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "id": 7741066,
+    "slug": "vand-unitate-in-casa-cuplata-120-mp-5-camere-675-mp-jucu-de-mijloc-IDvtNU",
+    "title": "Vand unitate in Casa Cuplata, 120 mp, 5 camere, 675 mp, Jucu de Mijloc",
+    "price": 159000,
+    "location": "Jucu de Mijloc",
+    "link": "https://www.storia.ro/ro/oferta/vand-unitate-in-casa-cuplata-120-mp-5-camere-675-mp-jucu-de-mijloc-IDvtNU",
+    "rooms": "FIVE",
+    "area": 120,
+    "terrain": 675
+  },
+  {
+    "id": 99343408000,
+    "slug": "casa-individuala-4-camere-140mp-teren-942mp-parcare-jucu-de-mijloc-IDDcE8",
+    "title": "Casa individuala 4 camere, 140mp, teren 942mp, parcare, Jucu de Mijloc",
+    "price": 160000,
+    "location": "Juc-Herghelie",
+    "link": "https://www.storia.ro/ro/oferta/casa-individuala-4-camere-140mp-teren-942mp-parcare-jucu-de-mijloc-IDDcE8",
+    "rooms": "FOUR",
+    "area": 140,
+    "terrain": 942
+  }
+]
