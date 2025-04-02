@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <title>Anunțuri de aprobat</title>
   <style>
-    body { font-family: sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; }
-    h1, h2 { margin-bottom: 10px; }
+    body { font-family: sans-serif; margin: 0; padding: 0; }
+    .topbar { display: flex; justify-content: space-between; align-items: center; padding: 20px; border-bottom: 1px solid #ccc; }
+    .columns { display: flex; justify-content: space-around; padding: 20px; gap: 20px; }
+    .column { flex: 1; max-width: 50%; }
+    h2 { margin-top: 0; }
     li { margin-bottom: 10px; }
-    .topbar { display: flex; justify-content: space-between; align-items: center; }
-    button { padding: 8px 14px; margin: 5px; cursor: pointer; }
-    .controls { margin-top: 20px; }
+    button { padding: 6px 12px; margin: 4px; cursor: pointer; }
     label { cursor: pointer; }
-    .section { margin-top: 40px; }
     .approved-item { margin-bottom: 12px; }
   </style>
 </head>
@@ -21,25 +21,35 @@
     <button onclick="logout()">Logout</button>
   </div>
 
-  <ul id="ads-list"></ul>
+  <div class="columns">
+    <!-- Case -->
+    <div class="column">
+      <h2>🏠 Case în așteptare</h2>
+      <ul id="ads-list-houses"></ul>
+      <div class="controls">
+        <button onclick="approveSelected('house')">✅ Aprobă selecția</button>
+        <button onclick="rejectSelected('house')">❌ Respinge selecția</button>
+      </div>
+      <h3>✅ Case aprobate</h3>
+      <div id="approved-list-houses">🔄 Se încarcă...</div>
+    </div>
 
-  <div class="controls">
-    <button onclick="approveSelected()">✅ Aprobă selecția</button>
-    <button onclick="rejectSelected()">❌ Respinge selecția</button>
-  </div>
-
-  <div class="section">
-    <h2>Anunțuri aprobate</h2>
-    <div id="approved-list">🔄 Se încarcă...</div>
+    <!-- Apartamente -->
+    <div class="column">
+      <h2>🏢 Apartamente în așteptare</h2>
+      <ul id="ads-list-apartments"></ul>
+      <div class="controls">
+        <button onclick="approveSelected('apartment')">✅ Aprobă selecția</button>
+        <button onclick="rejectSelected('apartment')">❌ Respinge selecția</button>
+      </div>
+      <h3>✅ Apartamente aprobate</h3>
+      <div id="approved-list-apartments">🔄 Se încarcă...</div>
+    </div>
   </div>
 
   <script>
-    const adsList = document.getElementById("ads-list");
-    const approvedList = document.getElementById("approved-list");
-
     const USERNAME = "stefan-szabo";
     const REPO = "real-estate-notifier";
-
     const rawUrl = (file) => `https://raw.githubusercontent.com/${USERNAME}/${REPO}/main/data/${file}`;
     const dispatchUrl = `https://api.github.com/repos/${USERNAME}/${REPO}/dispatches`;
 
@@ -54,25 +64,28 @@
 
     function logout() {
       localStorage.removeItem("gh_token");
-      alert("Token șters. Te rugăm să reîncarci.");
+      alert("Token șters. Reîncarcă pagina.");
       location.reload();
     }
 
-    async function loadPending() {
+    async function loadPending(type) {
+      const listEl = document.getElementById(`ads-list-${type}`);
+      const pendingFile = type === "house" ? "pending.json" : "apartments_pending.json";
+      const rejectedFile = type === "house" ? "rejected.json" : "apartments_rejected.json";
+
       try {
         const [pendingRes, rejectedRes] = await Promise.all([
-          fetch(rawUrl("pending.json")),
-          fetch(rawUrl("rejected.json"))
+          fetch(rawUrl(pendingFile)),
+          fetch(rawUrl(rejectedFile))
         ]);
 
         const pending = await pendingRes.json();
         const rejected = await rejectedRes.json();
         const rejectedIds = new Set(rejected.map(ad => ad.id));
-
         const visibleAds = pending.filter(ad => !rejectedIds.has(ad.id));
 
         if (!visibleAds.length) {
-          adsList.innerHTML = "<p>🎉 Nu există anunțuri în așteptare.</p>";
+          listEl.innerHTML = "<p>🎉 Nicio proprietate în așteptare.</p>";
           return;
         }
 
@@ -80,43 +93,62 @@
           const li = document.createElement("li");
           li.innerHTML = `
             <label>
-              <input type="checkbox" data-id="${ad.id}">
+              <input type="checkbox" data-id="${ad.id}" data-type="${type}">
               <strong>${ad.title}</strong> - ${ad.price} EUR - ${ad.location}<br>
               <a href="${ad.link}" target="_blank">${ad.link}</a>
             </label>
           `;
-          adsList.appendChild(li);
+          listEl.appendChild(li);
         });
       } catch (err) {
-        adsList.innerHTML = "<p>⚠️ Eroare la încărcarea anunțurilor.</p>";
+        listEl.innerHTML = "<p>⚠️ Eroare la încărcare.</p>";
         console.error(err);
       }
     }
 
-    async function loadApproved() {
+    async function loadApproved(type) {
+      const listEl = document.getElementById(`approved-list-${type}`);
+      const file = type === "house" ? "approved.json" : "apartments_approved.json";
+
       try {
-        const res = await fetch(rawUrl("approved.json"));
+        const res = await fetch(rawUrl(file));
         const ads = await res.json();
 
         if (!ads.length) {
-          approvedList.innerHTML = "<p>❌ Niciun anunț aprobat.</p>";
+          listEl.innerHTML = "<p>❌ Nicio proprietate aprobată.</p>";
           return;
         }
 
-        approvedList.innerHTML = "";
+        listEl.innerHTML = "";
         ads.forEach(ad => {
-          const div = document.createElement("div");
           const camere = ad.rooms || "N/A";
           const suprafata = ad.area || "N/A";
-          const teren = ad.terrain || "N/A";
+          const teren = ad.terrain || "—";
+          const div = document.createElement("div");
           div.className = "approved-item";
-          div.innerHTML = `🏠 camere ${camere} - ${ad.price} EUR, casa ${suprafata}, teren ${teren}<br><a href="${ad.link}" target="_blank">${ad.link}</a>`;
-          approvedList.appendChild(div);
+          div.innerHTML = `🏠 camere ${camere} - ${ad.price} EUR, ${type === "house" ? 'casă' : 'apartament'} ${suprafata}${type === "house" ? `, teren ${teren}` : ""}<br><a href="${ad.link}" target="_blank">${ad.link}</a>`;
+          listEl.appendChild(div);
         });
       } catch (err) {
-        approvedList.innerHTML = "<p>⚠️ Eroare la încărcarea celor aprobate.</p>";
+        listEl.innerHTML = "<p>⚠️ Eroare la încărcare.</p>";
         console.error(err);
       }
+    }
+
+    function getSelectedIds(type) {
+      return Array.from(document.querySelectorAll(`input[data-type="${type}"]:checked`)).map(el => el.dataset.id);
+    }
+
+    function approveSelected(type) {
+      const ids = getSelectedIds(type);
+      if (!ids.length) return alert("Selectează cel puțin un anunț.");
+      sendDispatch("approve-listings", ids);
+    }
+
+    function rejectSelected(type) {
+      const ids = getSelectedIds(type);
+      if (!ids.length) return alert("Selectează cel puțin un anunț.");
+      sendDispatch("reject-listings", ids);
     }
 
     async function sendDispatch(eventType, ids) {
@@ -139,33 +171,19 @@
       });
 
       if (res.ok) {
-        alert(`${eventType === "approve-listings" ? "Aprobate" : "Respinse"} cu succes!`);
+        alert("Actualizare trimisă. Pagina se va reîncărca.");
         location.reload();
       } else {
-        alert("Eroare la trimiterea acțiunii: " + res.statusText);
+        alert("❌ Eroare la trimiterea acțiunii.");
         console.error(await res.text());
       }
     }
 
-    function getSelectedIds() {
-      return Array.from(document.querySelectorAll("input[type=checkbox]:checked"))
-                  .map(el => el.dataset.id);
-    }
-
-    function approveSelected() {
-      const ids = getSelectedIds();
-      if (!ids.length) return alert("Selectează cel puțin un anunț.");
-      sendDispatch("approve-listings", ids);
-    }
-
-    function rejectSelected() {
-      const ids = getSelectedIds();
-      if (!ids.length) return alert("Selectează cel puțin un anunț.");
-      sendDispatch("reject-listings", ids);
-    }
-
-    loadPending();
-    loadApproved();
+    // Inițializare
+    loadPending("house");
+    loadApproved("house");
+    loadPending("apartment");
+    loadApproved("apartment");
   </script>
 </body>
 </html>

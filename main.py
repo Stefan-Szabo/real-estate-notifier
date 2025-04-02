@@ -3,11 +3,19 @@ import json
 import os
 import re
 
-PENDING_FILE = "data/pending.json"
-SEEN_FILE = "data/seen.json"
-APPROVED_FILE = "data/approved.json"
-REJECTED_FILE = "data/rejected.json"
-LAST_BATCH_FILE = "data/last_batch.json"
+# Fișiere pentru case
+PENDING_HOUSES = "data/pending.json"
+SEEN_HOUSES = "data/seen.json"
+APPROVED_HOUSES = "data/approved.json"
+REJECTED_HOUSES = "data/rejected.json"
+LAST_BATCH_HOUSES = "data/last_batch.json"
+
+# Fișiere pentru apartamente
+PENDING_APTS = "data/apartments_pending.json"
+SEEN_APTS = "data/apartments_seen.json"
+APPROVED_APTS = "data/apartments_approved.json"
+REJECTED_APTS = "data/apartments_rejected.json"
+LAST_BATCH_APTS = "data/apartments_last_batch.json"
 
 def load_json(path):
     if os.path.exists(path):
@@ -29,71 +37,63 @@ def get_build_id():
         return match.group(1)
     raise ValueError("❌ Nu am putut extrage buildId din pagina Storia.")
 
-def fetch_ads():
-    build_id = get_build_id()
-    base_url = (
-        f"https://www.storia.ro/_next/data/{build_id}"
-        "/ro/rezultate/vanzare/casa/cluj/apahida.json"
-        "?distanceRadius=15"
-        "&limit=72"
-        "&ownerTypeSingleSelect=ALL"
-        "&priceMax=180000"
-        "&areaMin=100"
-        "&terrainAreaMin=350"
-        "&buildYearMin=2010"
-        "&roomsNumber=%5BTHREE%2CFOUR%2CFIVE%2CSIX_OR_MORE%5D"
-        "&by=PRICE"
-        "&direction=ASC"
-        "&viewType=listing"
-        "&searchingCriteria=vanzare"
-        "&searchingCriteria=casa"
-        "&searchingCriteria=cluj"
-        "&searchingCriteria=apahida"
-    )
+def fetch_items(build_id, type="house"):
+    if type == "house":
+        search_path = "vanzare/casa/cluj/apahida"
+        filters = (
+            "distanceRadius=15"
+            "&limit=72"
+            "&ownerTypeSingleSelect=ALL"
+            "&priceMax=180000"
+            "&areaMin=100" 
+            "&terrainAreaMin=350"
+            "&buildYearMin=2010" 
+            "&roomsNumber=%5BTHREE%2CFOUR%2CFIVE%2CSIX_OR_MORE%5D"
+        )
+    elif type == "apartment":
+        search_path = "vanzare/apartament/cluj/apahida"
+        filters = (
+            "distanceRadius=10" 
+            "&limit=72" 
+            "&ownerTypeSingleSelect=ALL"
+            "&priceMax=140000" 
+            "&areaMin=60"
+            "&roomsNumber=%5BTHREE%2CFOUR%2CFIVE%2CSIX_OR_MORE%5D"
+        )
+        
 
-    all_items = []
+    base_url = f"https://www.storia.ro/_next/data/{build_id}/ro/rezultate/{search_path}.json?{filters}&by=PRICE&direction=ASC&viewType=listing"
+    
+    items = []
     for page in range(1, 5):
         url = base_url + f"&page={page}" if page > 1 else base_url
-        print(f"📦 Fetching page {page}...")
+        print(f"📦 Fetching {type} page {page}...")
         try:
             res = requests.get(url, headers={"User-Agent": "Mozilla/5.0"})
             res.raise_for_status()
             data = res.json()
-            items = data["pageProps"]["data"]["searchAds"]["items"]
-            if not items:
-                print(f"📭 Pagina {page} nu are anunțuri.")
+            page_items = data["pageProps"]["data"]["searchAds"]["items"]
+            if not page_items:
+                print(f"📭 Pagina {page} ({type}) nu are anunțuri.")
                 break
-            all_items.extend(items)
+            items.extend(page_items)
         except Exception as e:
-            print(f"❌ Eroare la pagina {page}: {e}")
+            print(f"❌ Eroare la pagina {page} ({type}): {e}")
             break
 
-    print(f"✅ Total anunțuri preluate: {len(all_items)}")
-    return all_items
+    print(f"✅ Total anunțuri ({type}) preluate: {len(items)}")
+    return items
 
-def main():
-    seen = load_json(SEEN_FILE)
-    approved = load_json(APPROVED_FILE)
-    rejected = load_json(REJECTED_FILE)
-    pending = load_json(PENDING_FILE)
-
+def process_ads(items, seen, approved, rejected, pending):
     seen_ids = {ad["id"] for ad in seen}
     approved_ids = {ad["id"] for ad in approved}
     rejected_ids = {ad["id"] for ad in rejected}
     pending_ids = {ad["id"] for ad in pending}
 
     exclude_ids = seen_ids | approved_ids | rejected_ids | pending_ids
-
-    all_ads = fetch_ads()
-    new_ads = [ad for ad in all_ads if ad["id"] not in exclude_ids]
-
-    if not new_ads:
-        print("Niciun anunț nou.")
-        save_json(LAST_BATCH_FILE, [])
-        return
+    new_ads = [ad for ad in items if ad["id"] not in exclude_ids]
 
     added_ads = []
-
     for ad in new_ads:
         item = {
             "id": ad["id"],
@@ -109,12 +109,37 @@ def main():
         pending.append(item)
         seen.append({"id": ad["id"]})
         added_ads.append(item)
+    
+    return added_ads
 
-    save_json(PENDING_FILE, pending)
-    save_json(SEEN_FILE, seen)
-    save_json(LAST_BATCH_FILE, added_ads)
+def main():
+    build_id = get_build_id()
 
-    print(f"✅ {len(added_ads)} anunțuri noi adăugate în pending. Notificările vor fi trimise de workflow-ul `notify.yml`.")
+    # --- CASE ---
+    houses = fetch_items(build_id, type="house")
+    seen = load_json(SEEN_HOUSES)
+    approved = load_json(APPROVED_HOUSES)
+    rejected = load_json(REJECTED_HOUSES)
+    pending = load_json(PENDING_HOUSES)
+    new_houses = process_ads(houses, seen, approved, rejected, pending)
+
+    save_json(SEEN_HOUSES, seen)
+    save_json(PENDING_HOUSES, pending)
+    save_json(LAST_BATCH_HOUSES, new_houses if new_houses else [])
+
+    # --- APARTAMENTE ---
+    apartments = fetch_items(build_id, type="apartment")
+    seen_a = load_json(SEEN_APTS)
+    approved_a = load_json(APPROVED_APTS)
+    rejected_a = load_json(REJECTED_APTS)
+    pending_a = load_json(PENDING_APTS)
+    new_apts = process_ads(apartments, seen_a, approved_a, rejected_a, pending_a)
+
+    save_json(SEEN_APTS, seen_a)
+    save_json(PENDING_APTS, pending_a)
+    save_json(LAST_BATCH_APTS, new_apts if new_apts else [])
+
+    print(f"✅ Case noi: {len(new_houses)} | Apartamente noi: {len(new_apts)}")
 
 if __name__ == "__main__":
     main()
