@@ -20,5 +20,38 @@
     "rooms": "FOUR",
     "area": 140,
     "terrain": 942
+  },
+  {
+    "id": 8583172,
+    "slug": "casa-individuala-jucu-de-mijloc-120mp-utili-470mp-teren-IDA0Sg",
+    "title": "Casa individuala Jucu de Mijloc, 120mp utili, 470mp teren",
+    "price": 149900,
+    "location": "Jucu de Sus",
+    "link": "https://www.storia.ro/ro/oferta/casa-individuala-jucu-de-mijloc-120mp-utili-470mp-teren-IDA0Sg",
+    "rooms": "FIVE",
+    "area": 120,
+    "terrain": 470
+  },
+  {
+    "id": 98715785000,
+    "slug": "casa-individuala-120-mp-utili-400mp-teren-IDAznb",
+    "title": "Casa individuala, 120 mp utili, 400mp teren",
+    "price": 160000,
+    "location": "Juc-Herghelie",
+    "link": "https://www.storia.ro/ro/oferta/casa-individuala-120-mp-utili-400mp-teren-IDAznb",
+    "rooms": "FOUR",
+    "area": 120,
+    "terrain": 400
+  },
+  {
+    "id": 98954153000,
+    "slug": "dezvoltator-vand-casa-n-corusu-la-8km-de-cluj-toate-utilitatile-IDBznP",
+    "title": "Dezvoltator, vand casa în Corusu la 8km de Cluj | toate utilitatile",
+    "price": 179990,
+    "location": "Corusu",
+    "link": "https://www.storia.ro/ro/oferta/dezvoltator-vand-casa-n-corusu-la-8km-de-cluj-toate-utilitatile-IDBznP",
+    "rooms": "FOUR",
+    "area": 130,
+    "terrain": 600
   }
 ]
