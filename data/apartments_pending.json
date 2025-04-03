@@ -240,5 +240,16 @@
     "rooms": "FOUR",
     "area": 153,
     "terrain": null
+  },
+  {
+    "id": 9372644,
+    "slug": "vand-apartament-in-apahida-IDDkfG",
+    "title": "Vand apartament in Apahida",
+    "price": 115000,
+    "location": "Apahida",
+    "link": "https://www.storia.ro/ro/oferta/vand-apartament-in-apahida-IDDkfG",
+    "rooms": "THREE",
+    "area": 76,
+    "terrain": null
   }
 ]
