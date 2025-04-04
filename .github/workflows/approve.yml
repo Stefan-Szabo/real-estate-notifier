@@ -13,13 +13,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Git pull latest changes
+        run: git pull origin main
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.10"
-
-      # - name: Install Python deps
-      #   run: pip install --quiet
 
       - name: Extract payload
         run: |
