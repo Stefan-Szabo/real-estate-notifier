@@ -1,16 +1,5 @@
 [
   {
-    "id": 9108813,
-    "slug": "vanzare-apartament-3-camere-cu-scara-interioara-apahida-IDCdCl",
-    "title": "Vanzare apartament 3 camere cu scara interioara - Apahida",
-    "price": 88000,
-    "location": "Apahida",
-    "link": "https://www.storia.ro/ro/oferta/vanzare-apartament-3-camere-cu-scara-interioara-apahida-IDCdCl",
-    "rooms": "THREE",
-    "area": 70.13,
-    "terrain": null
-  },
-  {
     "id": 8558777,
     "slug": "apartament-cu-3-camere-60mp-terasa-14mp-apahida-IDzUvN",
     "title": "Apartament cu 3 camere, 60mp, terasa 14mp, Apahida",
@@ -30,17 +19,6 @@
     "link": "https://www.storia.ro/ro/oferta/apartament-modern-de-3-camere-60-mp-apahida-IDzUxf",
     "rooms": "THREE",
     "area": 60,
-    "terrain": null
-  },
-  {
-    "id": 8558869,
-    "slug": "apartament-3-camere-2-etaje-70mp-zona-penny-IDzUyh",
-    "title": "Apartament 3 camere, 2 etaje, 70mp, zona Penny",
-    "price": 89900,
-    "location": "Apahida",
-    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-2-etaje-70mp-zona-penny-IDzUyh",
-    "rooms": "THREE",
-    "area": 70,
     "terrain": null
   },
   {
