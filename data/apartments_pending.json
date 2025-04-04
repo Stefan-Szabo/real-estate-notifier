@@ -33,72 +33,6 @@
     "terrain": null
   },
   {
-    "id": 9205583,
-    "slug": "apartament-de-vanzare-3-camere-jucu-de-sus-IDCCN9",
-    "title": "Apartament de vanzare 3 camere Jucu de sus",
-    "price": 125000,
-    "location": "Jucu de Sus",
-    "link": "https://www.storia.ro/ro/oferta/apartament-de-vanzare-3-camere-jucu-de-sus-IDCCN9",
-    "rooms": "THREE",
-    "area": 68,
-    "terrain": null
-  },
-  {
-    "id": 9330320,
-    "slug": "apartament-in-cluj-3-camere-70mp-balcon-bloc-nou-IDD9f2",
-    "title": "Apartament in Cluj  3 camere 70mp + balcon bloc nou",
-    "price": 129500,
-    "location": "Iris",
-    "link": "https://www.storia.ro/ro/oferta/apartament-in-cluj-3-camere-70mp-balcon-bloc-nou-IDD9f2",
-    "rooms": "THREE",
-    "area": 69.55,
-    "terrain": null
-  },
-  {
-    "id": 9301090,
-    "slug": "apartament-3-camere-68-mp-apahida-IDD1DA",
-    "title": "Apartament 3 camere, 68 mp, Apahida",
-    "price": 129900,
-    "location": "Apahida",
-    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-68-mp-apahida-IDD1DA",
-    "rooms": "THREE",
-    "area": 68,
-    "terrain": null
-  },
-  {
-    "id": 9297490,
-    "slug": "apartament-3-camere-la-cheie-70-mp-utili-zona-iris-IDD0Hv",
-    "title": "Apartament 3 camere la cheie, 70 mp utili, zona Iris",
-    "price": 130000,
-    "location": "Iris",
-    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-la-cheie-70-mp-utili-zona-iris-IDD0Hv",
-    "rooms": "THREE",
-    "area": 70,
-    "terrain": null
-  },
-  {
-    "id": 9132415,
-    "slug": "apartament-3-camere-de-vnzare-n-apahida-IDCjL1",
-    "title": "Apartament 3 camere de vânzare în Apahida",
-    "price": 131000,
-    "location": "Apahida",
-    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-de-vnzare-n-apahida-IDCjL1",
-    "rooms": "THREE",
-    "area": 64,
-    "terrain": null
-  },
-  {
-    "id": 9320181,
-    "slug": "apartament-modern-de-3-camere-63mp-parcare-sannicoara-IDD6Bw",
-    "title": "Apartament modern de 3 camere, 63mp, parcare, Sannicoara",
-    "price": 133000,
-    "location": "Sannicoara",
-    "link": "https://www.storia.ro/ro/oferta/apartament-modern-de-3-camere-63mp-parcare-sannicoara-IDD6Bw",
-    "rooms": "THREE",
-    "area": 63,
-    "terrain": null
-  },
-  {
     "id": 8556725,
     "slug": "raritate-in-apahida-penthouse-finisat-4-camere-82mp-terasa-48mp-IDzTZH",
     "title": "Raritate in APAHIDA! Penthouse FINISAT 4 camere, 82mp, terasa 48mp",
@@ -107,61 +41,6 @@
     "link": "https://www.storia.ro/ro/oferta/raritate-in-apahida-penthouse-finisat-4-camere-82mp-terasa-48mp-IDzTZH",
     "rooms": "FOUR",
     "area": 82,
-    "terrain": null
-  },
-  {
-    "id": 9060231,
-    "slug": "apartament-3-camere-63-mp-balcon-12mp-borhanci-IDC0YL",
-    "title": "Apartament 3 camere, 63 mp, balcon 12mp, Borhanci",
-    "price": 135000,
-    "location": "Colonia Borhanci",
-    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-63-mp-balcon-12mp-borhanci-IDC0YL",
-    "rooms": "THREE",
-    "area": 63,
-    "terrain": null
-  },
-  {
-    "id": 9367801,
-    "slug": "apartament-3-camere-balcon-94mp-parcare-zona-panemar-jucu-de-mijloc-IDDiZz",
-    "title": "Apartament 3 camere,Balcon,94mp,Parcare,Zona Panemar,Jucu de Mijloc",
-    "price": 135000,
-    "location": "Juc-Herghelie",
-    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-balcon-94mp-parcare-zona-panemar-jucu-de-mijloc-IDDiZz",
-    "rooms": "THREE",
-    "area": 95,
-    "terrain": null
-  },
-  {
-    "id": 8555582,
-    "slug": "apartament-3-camere-semifinisat-70mp-zona-auchan-IDzTHg",
-    "title": "Apartament 3 camere, semifinisat, 70mp, zona Auchan",
-    "price": 136207,
-    "location": "Iris",
-    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-semifinisat-70mp-zona-auchan-IDzTHg",
-    "rooms": "THREE",
-    "area": 69.85,
-    "terrain": null
-  },
-  {
-    "id": 9207018,
-    "slug": "apartament-4-camere-150mp-gradina-foisor-sauna-2-locuri-de-parcar-IDCDai",
-    "title": "Apartament 4 camere, 150mp, gradina, foisor, sauna, 2 locuri de parcar",
-    "price": 139900,
-    "location": "Apahida",
-    "link": "https://www.storia.ro/ro/oferta/apartament-4-camere-150mp-gradina-foisor-sauna-2-locuri-de-parcar-IDCDai",
-    "rooms": "FOUR",
-    "area": 150,
-    "terrain": null
-  },
-  {
-    "id": 9106447,
-    "slug": "apartament-in-casa-pe-2-niveluri-n-apahida-IDCd0b",
-    "title": "Apartament in casa pe 2 niveluri, în Apahida!",
-    "price": 140000,
-    "location": "Apahida",
-    "link": "https://www.storia.ro/ro/oferta/apartament-in-casa-pe-2-niveluri-n-apahida-IDCd0b",
-    "rooms": "FOUR",
-    "area": 153,
     "terrain": null
   },
   {
