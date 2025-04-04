@@ -53,5 +53,16 @@
     "rooms": "THREE",
     "area": 76,
     "terrain": null
+  },
+  {
+    "id": 9373213,
+    "slug": "apartament-3-camere-65-mp-apahida-IDDkoR",
+    "title": "Apartament 3 camere, 65 mp, Apahida",
+    "price": 127000,
+    "location": "Apahida",
+    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-65-mp-apahida-IDDkoR",
+    "rooms": "THREE",
+    "area": 65,
+    "terrain": null
   }
 ]
