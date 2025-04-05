@@ -86,5 +86,16 @@
     "rooms": "THREE",
     "area": 60,
     "terrain": null
+  },
+  {
+    "id": 9376713,
+    "slug": "apartmant-3-camere-pe-2-niveluri-confort-sporit-jucu-de-mijloc-IDDljj",
+    "title": "Apartmant 3 camere pe 2 niveluri, confort sporit, Jucu de Mijloc",
+    "price": 133000,
+    "location": "Juc-Herghelie",
+    "link": "https://www.storia.ro/ro/oferta/apartmant-3-camere-pe-2-niveluri-confort-sporit-jucu-de-mijloc-IDDljj",
+    "rooms": "THREE",
+    "area": 95,
+    "terrain": null
   }
 ]
