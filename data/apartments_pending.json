@@ -97,5 +97,16 @@
     "rooms": "THREE",
     "area": 95,
     "terrain": null
+  },
+  {
+    "id": 9377860,
+    "slug": "apartament-3-camere-cu-terasa-bloc-nou-premium-apahida-IDDlBO",
+    "title": "Apartament 3 camere cu terasa ,bloc nou Premium Apahida",
+    "price": 127000,
+    "location": "Apahida",
+    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-cu-terasa-bloc-nou-premium-apahida-IDDlBO",
+    "rooms": "THREE",
+    "area": 72,
+    "terrain": null
   }
 ]
