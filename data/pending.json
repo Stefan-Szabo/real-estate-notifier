@@ -42,5 +42,16 @@
     "rooms": "FOUR",
     "area": 115,
     "terrain": 600
+  },
+  {
+    "id": 9380095,
+    "slug": "casa-individuala-110-mp-util-600-mp-teren-mera-baciu-IDDmbR",
+    "title": "Casa individuala 110 mp util, 600 mp teren, Mera Baciu",
+    "price": 177000,
+    "location": "Baciu",
+    "link": "https://www.storia.ro/ro/oferta/casa-individuala-110-mp-util-600-mp-teren-mera-baciu-IDDmbR",
+    "rooms": "FOUR",
+    "area": 111,
+    "terrain": 600
   }
 ]
