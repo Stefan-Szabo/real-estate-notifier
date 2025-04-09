@@ -75,5 +75,16 @@
     "rooms": "FOUR",
     "area": 101,
     "terrain": 486
+  },
+  {
+    "id": 9387094,
+    "slug": "vanzare-casa-unifamiliala-127mpu-chinteni-IDDo0K",
+    "title": "Vanzare casa unifamiliala 127mpu – Chinteni",
+    "price": 135000,
+    "location": "Chinteni",
+    "link": "https://www.storia.ro/ro/oferta/vanzare-casa-unifamiliala-127mpu-chinteni-IDDo0K",
+    "rooms": "FOUR",
+    "area": 127,
+    "terrain": 665
   }
 ]
