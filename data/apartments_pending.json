@@ -119,5 +119,16 @@
     "rooms": "THREE",
     "area": 72,
     "terrain": null
+  },
+  {
+    "id": 9392629,
+    "slug": "apartament-3-camere-decomandate-etaj-intermediar-zona-centrala-IDDps1",
+    "title": "Apartament 3 camere decomandate, etaj intermediar zona centrala",
+    "price": 89500,
+    "location": "Apahida",
+    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-decomandate-etaj-intermediar-zona-centrala-IDDps1",
+    "rooms": "THREE",
+    "area": 63.15,
+    "terrain": null
   }
 ]
