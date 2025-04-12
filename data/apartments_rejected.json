@@ -526,5 +526,137 @@
     "rooms": "THREE",
     "area": 69,
     "terrain": null
+  },
+  {
+    "id": 8558777,
+    "slug": "apartament-cu-3-camere-60mp-terasa-14mp-apahida-IDzUvN",
+    "title": "Apartament cu 3 camere, 60mp, terasa 14mp, Apahida",
+    "price": 88000,
+    "location": "Apahida",
+    "link": "https://www.storia.ro/ro/oferta/apartament-cu-3-camere-60mp-terasa-14mp-apahida-IDzUvN",
+    "rooms": "THREE",
+    "area": 60,
+    "terrain": null
+  },
+  {
+    "id": 8558805,
+    "slug": "apartament-modern-de-3-camere-60-mp-apahida-IDzUxf",
+    "title": "Apartament modern de 3 camere, 60 mp, Apahida",
+    "price": 88000,
+    "location": "Apahida",
+    "link": "https://www.storia.ro/ro/oferta/apartament-modern-de-3-camere-60-mp-apahida-IDzUxf",
+    "rooms": "THREE",
+    "area": 60,
+    "terrain": null
+  },
+  {
+    "id": 9290300,
+    "slug": "vand-apartament-4-camere-IDCYPy",
+    "title": "Vand apartament 4 camere",
+    "price": 97000,
+    "location": "Apahida",
+    "link": "https://www.storia.ro/ro/oferta/vand-apartament-4-camere-IDCYPy",
+    "rooms": "FOUR",
+    "area": 97,
+    "terrain": null
+  },
+  {
+    "id": 8556725,
+    "slug": "raritate-in-apahida-penthouse-finisat-4-camere-82mp-terasa-48mp-IDzTZH",
+    "title": "Raritate in APAHIDA! Penthouse FINISAT 4 camere, 82mp, terasa 48mp",
+    "price": 134500,
+    "location": "Apahida",
+    "link": "https://www.storia.ro/ro/oferta/raritate-in-apahida-penthouse-finisat-4-camere-82mp-terasa-48mp-IDzTZH",
+    "rooms": "FOUR",
+    "area": 82,
+    "terrain": null
+  },
+  {
+    "id": 9372644,
+    "slug": "vand-apartament-in-apahida-IDDkfG",
+    "title": "Vand apartament in Apahida",
+    "price": 115000,
+    "location": "Apahida",
+    "link": "https://www.storia.ro/ro/oferta/vand-apartament-in-apahida-IDDkfG",
+    "rooms": "THREE",
+    "area": 76,
+    "terrain": null
+  },
+  {
+    "id": 9373213,
+    "slug": "apartament-3-camere-65-mp-apahida-IDDkoR",
+    "title": "Apartament 3 camere, 65 mp, Apahida",
+    "price": 127000,
+    "location": "Apahida",
+    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-65-mp-apahida-IDDkoR",
+    "rooms": "THREE",
+    "area": 65,
+    "terrain": null
+  },
+  {
+    "id": 8146309,
+    "slug": "apartament-de-vanzare-baile-cojocna-IDybe5",
+    "title": "Apartament de vanzare baile Cojocna",
+    "price": 60000,
+    "location": "Cojocna",
+    "link": "https://www.storia.ro/ro/oferta/apartament-de-vanzare-baile-cojocna-IDybe5",
+    "rooms": "THREE",
+    "area": 60,
+    "terrain": null
+  },
+  {
+    "id": 98146309000,
+    "slug": "apartament-de-vanzare-baile-cojocna-IDybe5",
+    "title": "Apartament de vanzare baile Cojocna",
+    "price": 60000,
+    "location": "Cojocna",
+    "link": "https://www.storia.ro/ro/oferta/apartament-de-vanzare-baile-cojocna-IDybe5",
+    "rooms": "THREE",
+    "area": 60,
+    "terrain": null
+  },
+  {
+    "id": 9376713,
+    "slug": "apartmant-3-camere-pe-2-niveluri-confort-sporit-jucu-de-mijloc-IDDljj",
+    "title": "Apartmant 3 camere pe 2 niveluri, confort sporit, Jucu de Mijloc",
+    "price": 133000,
+    "location": "Juc-Herghelie",
+    "link": "https://www.storia.ro/ro/oferta/apartmant-3-camere-pe-2-niveluri-confort-sporit-jucu-de-mijloc-IDDljj",
+    "rooms": "THREE",
+    "area": 95,
+    "terrain": null
+  },
+  {
+    "id": 9377860,
+    "slug": "apartament-3-camere-cu-terasa-bloc-nou-premium-apahida-IDDlBO",
+    "title": "Apartament 3 camere cu terasa ,bloc nou Premium Apahida",
+    "price": 127000,
+    "location": "Apahida",
+    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-cu-terasa-bloc-nou-premium-apahida-IDDlBO",
+    "rooms": "THREE",
+    "area": 72,
+    "terrain": null
+  },
+  {
+    "id": 9384989,
+    "slug": "apartament-cu-3-camere-2-bai-72-4-mp-situat-in-apahida-IDDnsN",
+    "title": "Apartament cu 3 camere + 2 bai, 72.4 mp,situat in Apahida!",
+    "price": 107000,
+    "location": "Apahida",
+    "link": "https://www.storia.ro/ro/oferta/apartament-cu-3-camere-2-bai-72-4-mp-situat-in-apahida-IDDnsN",
+    "rooms": "THREE",
+    "area": 72,
+    "terrain": null
+  },
+  {
+    "id": 9392629,
+    "slug": "apartament-3-camere-decomandate-etaj-intermediar-zona-centrala-IDDps1",
+    "title": "Apartament 3 camere decomandate, etaj intermediar zona centrala",
+    "price": 89500,
+    "location": "Apahida",
+    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-decomandate-etaj-intermediar-zona-centrala-IDDps1",
+    "rooms": "THREE",
+    "area": 63.15,
+    "terrain": null
   }
 ]
