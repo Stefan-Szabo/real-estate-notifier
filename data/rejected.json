@@ -1857,5 +1857,104 @@
     "rooms": "FOUR",
     "area": 115,
     "terrain": 600
+  },
+  {
+    "id": 99220942000,
+    "slug": "cas-individual-176mp-5-camere-3-dormitoare-2-bi-apahida-IDCGMS",
+    "title": "Casă individuală, 176mp, 5 camere, 3 dormitoare, 2 băi, Apahida",
+    "price": 180000,
+    "location": "Apahida",
+    "link": "https://www.storia.ro/ro/oferta/cas-individual-176mp-5-camere-3-dormitoare-2-bi-apahida-IDCGMS",
+    "rooms": "FIVE",
+    "area": 176,
+    "terrain": 500
+  },
+  {
+    "id": 99052128000,
+    "slug": "casa-individuala-dezmir-stil-deosebit-IDBYS4",
+    "title": "Casa individuala , Dezmir, stil deosebit",
+    "price": 180000,
+    "location": "Dezmir",
+    "link": "https://www.storia.ro/ro/oferta/casa-individuala-dezmir-stil-deosebit-IDBYS4",
+    "rooms": "FOUR",
+    "area": 118,
+    "terrain": 440
+  },
+  {
+    "id": 99025727000,
+    "slug": "casa-de-vanzare-in-luminis-jucu-de-sus-IDBS0f",
+    "title": "Casa de vanzare in LUMINIS Jucu de Sus",
+    "price": 180000,
+    "location": "Jucu de Mijloc",
+    "link": "https://www.storia.ro/ro/oferta/casa-de-vanzare-in-luminis-jucu-de-sus-IDBS0f",
+    "rooms": "FOUR",
+    "area": 112,
+    "terrain": 750
+  },
+  {
+    "id": 9380095,
+    "slug": "casa-individuala-110-mp-util-600-mp-teren-mera-baciu-IDDmbR",
+    "title": "Casa individuala 110 mp util, 600 mp teren, Mera Baciu",
+    "price": 177000,
+    "location": "Baciu",
+    "link": "https://www.storia.ro/ro/oferta/casa-individuala-110-mp-util-600-mp-teren-mera-baciu-IDDmbR",
+    "rooms": "FOUR",
+    "area": 111,
+    "terrain": 600
+  },
+  {
+    "id": 7432026,
+    "slug": "casa-individuala-cu-garaj-in-jucu-de-mijloc-IDwbpo",
+    "title": "Casa individuala cu garaj in Jucu de Mijloc",
+    "price": 155000,
+    "location": "Juc-Herghelie",
+    "link": "https://www.storia.ro/ro/oferta/casa-individuala-cu-garaj-in-jucu-de-mijloc-IDwbpo",
+    "rooms": "FOUR",
+    "area": 167,
+    "terrain": 450
+  },
+  {
+    "id": 9386775,
+    "slug": "casa-individuala-pe-un-nivel-campenesti-3dormitoare-486mp-teren-IDDnWB",
+    "title": "Casa individuala pe un nivel, Campenesti, 3dormitoare, 486mp teren",
+    "price": 170000,
+    "location": "Iris",
+    "link": "https://www.storia.ro/ro/oferta/casa-individuala-pe-un-nivel-campenesti-3dormitoare-486mp-teren-IDDnWB",
+    "rooms": "FOUR",
+    "area": 101,
+    "terrain": 486
+  },
+  {
+    "id": 9387094,
+    "slug": "vanzare-casa-unifamiliala-127mpu-chinteni-IDDo0K",
+    "title": "Vanzare casa unifamiliala 127mpu – Chinteni",
+    "price": 135000,
+    "location": "Chinteni",
+    "link": "https://www.storia.ro/ro/oferta/vanzare-casa-unifamiliala-127mpu-chinteni-IDDo0K",
+    "rooms": "FOUR",
+    "area": 127,
+    "terrain": 665
+  },
+  {
+    "id": 9389096,
+    "slug": "duplex-semifinisat-in-chinteni-5-camere-120mp-utili-375mp-teren-IDDox2",
+    "title": "Duplex semifinisat in Chinteni, 5 camere, 120mp utili, 375mp teren",
+    "price": 159000,
+    "location": "Chinteni",
+    "link": "https://www.storia.ro/ro/oferta/duplex-semifinisat-in-chinteni-5-camere-120mp-utili-375mp-teren-IDDox2",
+    "rooms": "FIVE",
+    "area": 120,
+    "terrain": 375
+  },
+  {
+    "id": 8557697,
+    "slug": "oportunitate-casa-unifamiliala-in-ansamblu-rezidential-zona-jucu-k-IDzUfn",
+    "title": "Oportunitate ! Casa unifamiliala in ansamblu rezidential, zona Jucu ,K",
+    "price": 168000,
+    "location": "Juc-Herghelie",
+    "link": "https://www.storia.ro/ro/oferta/oportunitate-casa-unifamiliala-in-ansamblu-rezidential-zona-jucu-k-IDzUfn",
+    "rooms": "FOUR",
+    "area": 146,
+    "terrain": 356
   }
 ]
