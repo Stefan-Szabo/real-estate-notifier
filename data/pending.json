@@ -119,5 +119,16 @@
     "rooms": "FOUR",
     "area": 190,
     "terrain": 550
+  },
+  {
+    "id": 9395599,
+    "slug": "casa-individuala-146mp-cu-garaj-in-chinteni-IDDqdW",
+    "title": "Casa individuala 146mp cu garaj in Chinteni",
+    "price": 168000,
+    "location": "Chinteni",
+    "link": "https://www.storia.ro/ro/oferta/casa-individuala-146mp-cu-garaj-in-chinteni-IDDqdW",
+    "rooms": "FOUR",
+    "area": 120,
+    "terrain": 400
   }
 ]
