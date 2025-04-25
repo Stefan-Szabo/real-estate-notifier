@@ -9,5 +9,27 @@
     "rooms": "THREE",
     "area": 69,
     "terrain": null
+  },
+  {
+    "id": 9297396,
+    "slug": "apartament-3-camere-de-vanzare-in-marasti-cluj-napoca-IDD0G0",
+    "title": "Apartament 3 camere de vanzare in Marasti, Cluj Napoca",
+    "price": 19900,
+    "location": "Cluj-Napoca",
+    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-de-vanzare-in-marasti-cluj-napoca-IDD0G0",
+    "rooms": "THREE",
+    "area": 65,
+    "terrain": null
+  },
+  {
+    "id": 99297396000,
+    "slug": "apartament-3-camere-de-vanzare-in-marasti-cluj-napoca-IDD0G0",
+    "title": "Apartament 3 camere de vanzare in Marasti, Cluj Napoca",
+    "price": 19900,
+    "location": "Cluj-Napoca",
+    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-de-vanzare-in-marasti-cluj-napoca-IDD0G0",
+    "rooms": "THREE",
+    "area": 65,
+    "terrain": null
   }
 ]
