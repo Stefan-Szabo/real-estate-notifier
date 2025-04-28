@@ -130,5 +130,16 @@
     "rooms": "FOUR",
     "area": 120,
     "terrain": 400
+  },
+  {
+    "id": 99378650000,
+    "slug": "casa-individuala-la-cheie-115-mp-utili-teren-600-mp-zona-aerisita-a-IDDlOy",
+    "title": "Casa individuala la cheie 115 mp utili, teren 600 mp. Zona aerisita. A",
+    "price": 180000,
+    "location": "Corusu",
+    "link": "https://www.storia.ro/ro/oferta/casa-individuala-la-cheie-115-mp-utili-teren-600-mp-zona-aerisita-a-IDDlOy",
+    "rooms": "FOUR",
+    "area": 115,
+    "terrain": 600
   }
 ]
