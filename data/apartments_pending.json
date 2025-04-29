@@ -31,5 +31,16 @@
     "rooms": "THREE",
     "area": 65,
     "terrain": null
+  },
+  {
+    "id": 9424062,
+    "slug": "apartament-3-camere-63-mp-utili-mobilat-estimo-sannicoara-IDDxD0",
+    "title": "Apartament 3 camere, 63 mp utili, mobilat – Estimo, Sannicoara",
+    "price": 130000,
+    "location": "Sannicoara",
+    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-63-mp-utili-mobilat-estimo-sannicoara-IDDxD0",
+    "rooms": "THREE",
+    "area": 63,
+    "terrain": null
   }
 ]
