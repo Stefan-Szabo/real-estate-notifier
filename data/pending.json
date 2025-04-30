@@ -152,5 +152,16 @@
     "rooms": "SEVEN",
     "area": 180,
     "terrain": 530
+  },
+  {
+    "id": 9425969,
+    "slug": "casa-semifinisata-cu-4-camere-teren-drept-426-mp-campenesti-zona-IDDy7L",
+    "title": "Casa semifinisata cu 4 camere, teren drept 426 mp – Campenesti, zona",
+    "price": 149990,
+    "location": "Campenesti",
+    "link": "https://www.storia.ro/ro/oferta/casa-semifinisata-cu-4-camere-teren-drept-426-mp-campenesti-zona-IDDy7L",
+    "rooms": "FIVE",
+    "area": 112,
+    "terrain": 426
   }
 ]
