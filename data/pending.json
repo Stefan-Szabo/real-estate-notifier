@@ -141,5 +141,16 @@
     "rooms": "FOUR",
     "area": 115,
     "terrain": 600
+  },
+  {
+    "id": 9283730,
+    "slug": "casa-individuala-spatioasa-d-p-e-in-campenesti-IDCX7A",
+    "title": "Casa individuala spatioasa D+P+E in Campenesti",
+    "price": 179000,
+    "location": "Juc-Herghelie",
+    "link": "https://www.storia.ro/ro/oferta/casa-individuala-spatioasa-d-p-e-in-campenesti-IDCX7A",
+    "rooms": "SEVEN",
+    "area": 180,
+    "terrain": 530
   }
 ]
