@@ -163,5 +163,16 @@
     "rooms": "FIVE",
     "area": 112,
     "terrain": 426
+  },
+  {
+    "id": 98557225000,
+    "slug": "de-vanzare-casa-individuala-135-mp-utili-1553-mp-teren-IDzU7L",
+    "title": "De vanzare casa individuala,135 mp utili, 1553 mp teren",
+    "price": 160000,
+    "location": "Cara",
+    "link": "https://www.storia.ro/ro/oferta/de-vanzare-casa-individuala-135-mp-utili-1553-mp-teren-IDzU7L",
+    "rooms": "SEVEN",
+    "area": 135,
+    "terrain": 1553
   }
 ]
