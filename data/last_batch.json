@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "id": 96944310000,
+    "slug": "casa-deosebita-cu-cf-dezmir-asfalt-utilitati-panorama-teren-500mp-IDt8x0",
+    "title": "Casa deosebita cu CF Dezmir asfalt utilitati panorama teren 500mp",
+    "price": 160000,
+    "location": "Cluj-Napoca",
+    "link": "https://www.storia.ro/ro/oferta/casa-deosebita-cu-cf-dezmir-asfalt-utilitati-panorama-teren-500mp-IDt8x0",
+    "rooms": "FIVE",
+    "area": 136,
+    "terrain": 536
+  },
+  {
+    "id": 98777964000,
+    "slug": "casa-4-cam-240-mp-utili-451-mp-teren-valea-chintaului-strada-linis-IDAPy4",
+    "title": "Casa 4 cam, 240 mp utili, 451 mp teren, Valea Chintaului, strada linis",
+    "price": 180000,
+    "location": "Cluj-Napoca",
+    "link": "https://www.storia.ro/ro/oferta/casa-4-cam-240-mp-utili-451-mp-teren-valea-chintaului-strada-linis-IDAPy4",
+    "rooms": "FIVE",
+    "area": 240,
+    "terrain": 451
+  }
+]
