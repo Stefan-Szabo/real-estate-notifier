@@ -64,5 +64,16 @@
     "rooms": "THREE",
     "area": 63,
     "terrain": null
+  },
+  {
+    "id": 9433390,
+    "slug": "apartament-3-camere-finisat-66mp-parcare-situat-in-apahida-IDDA3s",
+    "title": "Apartament 3 camere, finisat, 66mp, parcare, situat in Apahida!",
+    "price": 120000,
+    "location": "Sannicoara",
+    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-finisat-66mp-parcare-situat-in-apahida-IDDA3s",
+    "rooms": "THREE",
+    "area": 66,
+    "terrain": null
   }
 ]
