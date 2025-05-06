@@ -229,5 +229,16 @@
     "rooms": "THREE",
     "area": 125,
     "terrain": 510
+  },
+  {
+    "id": 9436082,
+    "slug": "casa-cu-5-camere-132-mp-utili-400-mp-teren-campenesti-IDDAKS",
+    "title": "Casa cu 5 camere, 132 mp utili, 400 mp teren, Campenesti",
+    "price": 179900,
+    "location": "Juc-Herghelie",
+    "link": "https://www.storia.ro/ro/oferta/casa-cu-5-camere-132-mp-utili-400-mp-teren-campenesti-IDDAKS",
+    "rooms": "FIVE",
+    "area": 132,
+    "terrain": 400
   }
 ]

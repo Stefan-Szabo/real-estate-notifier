@@ -86,5 +86,16 @@
     "rooms": "THREE",
     "area": 61,
     "terrain": null
+  },
+  {
+    "id": 9436005,
+    "slug": "apartament-3-camere-semifinisat-72-mp-parcare-situat-in-apahida-IDDAJD",
+    "title": "Apartament 3 camere, semifinisat, 72 mp, parcare, situat in Apahida!",
+    "price": 89500,
+    "location": "Sannicoara",
+    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-semifinisat-72-mp-parcare-situat-in-apahida-IDDAJD",
+    "rooms": "THREE",
+    "area": 72,
+    "terrain": null
   }
 ]
