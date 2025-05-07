@@ -1956,5 +1956,27 @@
     "rooms": "FOUR",
     "area": 146,
     "terrain": 356
+  },
+  {
+    "id": 7941421,
+    "slug": "exclusivitate-casa-din-busteni-intregi-in-chinteni-IDxjWr",
+    "title": "Exclusivitate! Casa din busteni intregi in Chinteni",
+    "price": 169000,
+    "location": "Chinteni",
+    "link": "https://www.storia.ro/ro/oferta/exclusivitate-casa-din-busteni-intregi-in-chinteni-IDxjWr",
+    "rooms": "THREE",
+    "area": 120,
+    "terrain": 740
+  },
+  {
+    "id": 9155372,
+    "slug": "vanzare-casa-individuala-d-p-m-casuta-de-vara-teren-3900-mp-loc-IDCpJi",
+    "title": "Vanzare casa individuala D+P+M + casuta de vara + teren 3900 mp, loc.",
+    "price": 180000,
+    "location": "Visea",
+    "link": "https://www.storia.ro/ro/oferta/vanzare-casa-individuala-d-p-m-casuta-de-vara-teren-3900-mp-loc-IDCpJi",
+    "rooms": "MORE",
+    "area": 235,
+    "terrain": 3900
   }
 ]
