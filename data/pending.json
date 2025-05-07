@@ -251,5 +251,16 @@
     "rooms": "FOUR",
     "area": 139,
     "terrain": 445
+  },
+  {
+    "id": 9162407,
+    "slug": "duplex-finalizat-zona-intrare-chinteni-IDCryL",
+    "title": "Duplex finalizat | Zona Intrare Chinteni",
+    "price": 179000,
+    "location": "Popesti",
+    "link": "https://www.storia.ro/ro/oferta/duplex-finalizat-zona-intrare-chinteni-IDCryL",
+    "rooms": "FIVE",
+    "area": 117,
+    "terrain": 699
   }
 ]
