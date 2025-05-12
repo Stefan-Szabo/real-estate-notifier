@@ -273,5 +273,27 @@
     "rooms": "FIVE",
     "area": 150,
     "terrain": 700
+  },
+  {
+    "id": 8556762,
+    "slug": "casa-individuala-5-camere-112-mp-426-teren-campenesti-IDzU0i",
+    "title": "Casa individuala 5 camere, 112 mp, 426 teren, Campenesti",
+    "price": 149000,
+    "location": "Campenesti",
+    "link": "https://www.storia.ro/ro/oferta/casa-individuala-5-camere-112-mp-426-teren-campenesti-IDzU0i",
+    "rooms": "FIVE",
+    "area": 112,
+    "terrain": 426
+  },
+  {
+    "id": 9451193,
+    "slug": "casa-individuala-jucu-de-mijloc-120mp-3-bai-garaj-teren-603mp-IDDEGB",
+    "title": "Casa individuala Jucu de Mijloc, 120mp, 3 bai, garaj, teren 603mp",
+    "price": 179999,
+    "location": "Juc-Herghelie",
+    "link": "https://www.storia.ro/ro/oferta/casa-individuala-jucu-de-mijloc-120mp-3-bai-garaj-teren-603mp-IDDEGB",
+    "rooms": "FOUR",
+    "area": 120,
+    "terrain": 603
   }
 ]
