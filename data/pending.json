@@ -1,16 +1,5 @@
 [
   {
-    "id": 9397966,
-    "slug": "confort-si-stil-duplex-exceptional-in-campenesti-IDDqQ6",
-    "title": "Confort si stil – Duplex exceptional in Campenesti",
-    "price": 163000,
-    "location": "Juc-Herghelie",
-    "link": "https://www.storia.ro/ro/oferta/confort-si-stil-duplex-exceptional-in-campenesti-IDDqQ6",
-    "rooms": "FOUR",
-    "area": 166.92,
-    "terrain": 378
-  },
-  {
     "id": 99106378000,
     "slug": "casa-individuala-in-chinteni-511mp-teren-IDCcZ4",
     "title": "Casa individuala in Chinteni , 511mp teren",
@@ -42,17 +31,6 @@
     "rooms": "SIX",
     "area": 375,
     "terrain": 1000
-  },
-  {
-    "id": 99177156000,
-    "slug": "duplex-120mp-utili-teren-400-mp-dezmir-IDCwoE",
-    "title": "Duplex 120mp utili , teren 400 mp , Dezmir",
-    "price": 179000,
-    "location": "Cluj-Napoca",
-    "link": "https://www.storia.ro/ro/oferta/duplex-120mp-utili-teren-400-mp-dezmir-IDCwoE",
-    "rooms": "FOUR",
-    "area": 120,
-    "terrain": 400
   },
   {
     "id": 6944310,
@@ -229,17 +207,6 @@
     "rooms": "FOUR",
     "area": 139,
     "terrain": 445
-  },
-  {
-    "id": 9162407,
-    "slug": "duplex-finalizat-zona-intrare-chinteni-IDCryL",
-    "title": "Duplex finalizat | Zona Intrare Chinteni",
-    "price": 179000,
-    "location": "Popesti",
-    "link": "https://www.storia.ro/ro/oferta/duplex-finalizat-zona-intrare-chinteni-IDCryL",
-    "rooms": "FIVE",
-    "area": 117,
-    "terrain": 699
   },
   {
     "id": 9439365,
