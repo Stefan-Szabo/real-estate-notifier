@@ -262,5 +262,16 @@
     "rooms": "FOUR",
     "area": 126,
     "terrain": 356
+  },
+  {
+    "id": 9449330,
+    "slug": "casa-frumoasa-panorama-superba-campenesti-IDDEcy",
+    "title": "Casa frumoasa! Panorama superba ! Campenesti",
+    "price": 145000,
+    "location": "Campenesti",
+    "link": "https://www.storia.ro/ro/oferta/casa-frumoasa-panorama-superba-campenesti-IDDEcy",
+    "rooms": "FIVE",
+    "area": 150,
+    "terrain": 700
   }
 ]
