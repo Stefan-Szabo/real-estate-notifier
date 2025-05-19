@@ -20,5 +20,16 @@
     "rooms": "THREE",
     "area": 62,
     "terrain": null
+  },
+  {
+    "id": 9466849,
+    "slug": "apartament-cu-3-camere-parcare-beta-residence-IDDIL7",
+    "title": "Apartament cu 3 camere, parcare, Beta Residence",
+    "price": 128000,
+    "location": "Cluj-Napoca",
+    "link": "https://www.storia.ro/ro/oferta/apartament-cu-3-camere-parcare-beta-residence-IDDIL7",
+    "rooms": "THREE",
+    "area": 60,
+    "terrain": null
   }
 ]
