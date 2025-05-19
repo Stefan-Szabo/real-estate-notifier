@@ -75,5 +75,16 @@
     "rooms": "FOUR",
     "area": 120,
     "terrain": 452
+  },
+  {
+    "id": 7438290,
+    "slug": "casa-individuala-cu-curte-generoasa-IDwd2q",
+    "title": "Casa individuala cu curte generoasa",
+    "price": 160000,
+    "location": "Chinteni",
+    "link": "https://www.storia.ro/ro/oferta/casa-individuala-cu-curte-generoasa-IDwd2q",
+    "rooms": "FIVE",
+    "area": 120,
+    "terrain": 600
   }
 ]
