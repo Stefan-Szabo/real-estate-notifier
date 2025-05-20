@@ -97,5 +97,16 @@
     "rooms": "FOUR",
     "area": 130,
     "terrain": 500
+  },
+  {
+    "id": 98860108000,
+    "slug": "comision-0-casa-tip-duplex-in-tureni-la-20-km-de-cluj-napoca-IDBaUY",
+    "title": "Comision 0. Casa tip duplex in Tureni! La 20 km de Cluj-Napoca",
+    "price": 160000,
+    "location": "Tureni",
+    "link": "https://www.storia.ro/ro/oferta/comision-0-casa-tip-duplex-in-tureni-la-20-km-de-cluj-napoca-IDBaUY",
+    "rooms": "FOUR",
+    "area": 120,
+    "terrain": 366
   }
 ]
