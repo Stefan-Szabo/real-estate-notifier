@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "id": 9480729,
+    "slug": "apartament-n-apahida-finisat-mobilat-utilat-cu-parcare-inclus-IDDMmZ",
+    "title": "Apartament în Apahida, finisat, mobilat, utilat cu parcare inclusă.",
+    "price": 84000,
+    "location": "Apahida",
+    "link": "https://www.storia.ro/ro/oferta/apartament-n-apahida-finisat-mobilat-utilat-cu-parcare-inclus-IDDMmZ",
+    "rooms": "FOUR",
+    "area": 97,
+    "terrain": null
+  },
+  {
+    "id": 9480714,
+    "slug": "apartament-la-cheie-mobilat-utilat-parcare-inclus-mutare-imediat-IDDMmK",
+    "title": "Apartament la cheie, mobilat, utilat, parcare inclusă. Mutare imediată",
+    "price": 135000,
+    "location": "Apahida",
+    "link": "https://www.storia.ro/ro/oferta/apartament-la-cheie-mobilat-utilat-parcare-inclus-mutare-imediat-IDDMmK",
+    "rooms": "THREE",
+    "area": 60,
+    "terrain": null
+  }
+]
