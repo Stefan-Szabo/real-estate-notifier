@@ -1,1 +1,35 @@
-[]
+[
+  {
+    "id": 9487997,
+    "slug": "duplex-de-vanzare-120-mp-365mp-curte-tureni-159900-eur-IDDOgd",
+    "title": "Duplex de vanzare,120 mp,+365mp. curte, Tureni, 159900 Eur",
+    "price": 159900,
+    "location": "Feleacu",
+    "link": "https://www.storia.ro/ro/oferta/duplex-de-vanzare-120-mp-365mp-curte-tureni-159900-eur-IDDOgd",
+    "rooms": "FOUR",
+    "area": 120,
+    "terrain": 365
+  },
+  {
+    "id": 9488081,
+    "slug": "duplex-de-vanzare-120-mp-semifinisat-159900-eur-tureni-IDDOhz",
+    "title": "Duplex de vanzare, 120 mp., semifinisat, 159900 Eur, Tureni",
+    "price": 159900,
+    "location": "Tureni",
+    "link": "https://www.storia.ro/ro/oferta/duplex-de-vanzare-120-mp-semifinisat-159900-eur-tureni-IDDOhz",
+    "rooms": "FOUR",
+    "area": 120,
+    "terrain": 450
+  },
+  {
+    "id": 99436082000,
+    "slug": "casa-cu-5-camere-132-mp-utili-400-mp-teren-campenesti-IDDAKS",
+    "title": "Casa cu 5 camere, 132 mp utili, 400 mp teren, Campenesti",
+    "price": 179900,
+    "location": "Juc-Herghelie",
+    "link": "https://www.storia.ro/ro/oferta/casa-cu-5-camere-132-mp-utili-400-mp-teren-campenesti-IDDAKS",
+    "rooms": "FIVE",
+    "area": 132,
+    "terrain": 400
+  }
+]
