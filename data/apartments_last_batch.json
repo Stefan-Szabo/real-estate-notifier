@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "id": 9499818,
+    "slug": "apartament-3-camere-grigorescu-zona-hotel-napoca-curte-cu-gradina-IDDRkS",
+    "title": "Apartament 3 camere Grigorescu, zona Hotel Napoca, curte cu gradina",
+    "price": 420,
+    "location": "Cluj-Napoca",
+    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-grigorescu-zona-hotel-napoca-curte-cu-gradina-IDDRkS",
+    "rooms": "THREE",
+    "area": 101,
+    "terrain": null
+  },
+  {
+    "id": 99499818000,
+    "slug": "apartament-3-camere-grigorescu-zona-hotel-napoca-curte-cu-gradina-IDDRkS",
+    "title": "Apartament 3 camere Grigorescu, zona Hotel Napoca, curte cu gradina",
+    "price": 420,
+    "location": "Cluj-Napoca",
+    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-grigorescu-zona-hotel-napoca-curte-cu-gradina-IDDRkS",
+    "rooms": "THREE",
+    "area": 101,
+    "terrain": null
+  }
+]
