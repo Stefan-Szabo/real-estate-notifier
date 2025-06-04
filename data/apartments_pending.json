@@ -130,5 +130,27 @@
     "rooms": "THREE",
     "area": 69,
     "terrain": null
+  },
+  {
+    "id": 9506384,
+    "slug": "apartament-finsiat-3-camere-2-balcoane-parcare-si-tva-inclus-IDDT2M",
+    "title": "Apartament finsiat, 3 camere, 2 balcoane, parcare si TVA inclus",
+    "price": 120000,
+    "location": "Apahida",
+    "link": "https://www.storia.ro/ro/oferta/apartament-finsiat-3-camere-2-balcoane-parcare-si-tva-inclus-IDDT2M",
+    "rooms": "THREE",
+    "area": 66,
+    "terrain": null
+  },
+  {
+    "id": 9506455,
+    "slug": "apartament-3-camere-decomandate-73mp-str-aurel-vlaicu-IDDT3W",
+    "title": "Apartament 3 camere decomandate, 73mp, str. Aurel Vlaicu",
+    "price": 134999,
+    "location": "Marasti",
+    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-decomandate-73mp-str-aurel-vlaicu-IDDT3W",
+    "rooms": "THREE",
+    "area": 73,
+    "terrain": null
   }
 ]

@@ -306,5 +306,16 @@
     "rooms": "FOUR",
     "area": 119,
     "terrain": 438
+  },
+  {
+    "id": 9446822,
+    "slug": "casa-renovabila-teren-1526-mp-jucu-de-mijloc-IDDDy6",
+    "title": "Casa renovabila , teren 1526 mp, Jucu de Mijloc",
+    "price": 150000,
+    "location": "Feleacu",
+    "link": "https://www.storia.ro/ro/oferta/casa-renovabila-teren-1526-mp-jucu-de-mijloc-IDDDy6",
+    "rooms": "SEVEN",
+    "area": 171,
+    "terrain": 1518
   }
 ]
