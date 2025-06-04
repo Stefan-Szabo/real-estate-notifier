@@ -152,5 +152,16 @@
     "rooms": "THREE",
     "area": 73,
     "terrain": null
+  },
+  {
+    "id": 9304086,
+    "slug": "apartament-3-camere-iris-IDD2pU",
+    "title": "Apartament 3 camere Iris",
+    "price": 119000,
+    "location": "Iris",
+    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-iris-IDD2pU",
+    "rooms": "THREE",
+    "area": 60,
+    "terrain": null
   }
 ]
