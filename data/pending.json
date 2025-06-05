@@ -317,5 +317,16 @@
     "rooms": "SEVEN",
     "area": 171,
     "terrain": 1518
+  },
+  {
+    "id": 9508438,
+    "slug": "casa-tip-duplex-situata-in-chinteni-IDDTzU",
+    "title": "Casa Tip Duplex situata in Chinteni!",
+    "price": 168000,
+    "location": "Chinteni",
+    "link": "https://www.storia.ro/ro/oferta/casa-tip-duplex-situata-in-chinteni-IDDTzU",
+    "rooms": "FOUR",
+    "area": 232,
+    "terrain": 355
   }
 ]
