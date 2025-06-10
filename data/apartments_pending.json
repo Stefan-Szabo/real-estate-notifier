@@ -174,5 +174,16 @@
     "rooms": "THREE",
     "area": 63,
     "terrain": null
+  },
+  {
+    "id": 9517150,
+    "slug": "apartament-generos-cu-4-camere-si-terasa-de-50mp-spatiu-lumina-si-co-IDDWQq",
+    "title": "Apartament Generos cu 4 Camere si Terasa de 50mp  Spatiu, Lumina si Co",
+    "price": 130000,
+    "location": "Apahida",
+    "link": "https://www.storia.ro/ro/oferta/apartament-generos-cu-4-camere-si-terasa-de-50mp-spatiu-lumina-si-co-IDDWQq",
+    "rooms": "FOUR",
+    "area": 82,
+    "terrain": null
   }
 ]
