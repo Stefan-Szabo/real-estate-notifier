@@ -185,5 +185,16 @@
     "rooms": "FOUR",
     "area": 82,
     "terrain": null
+  },
+  {
+    "id": 9517436,
+    "slug": "apartament-72mp-semifinisat-cu-3-camere-balcon-7-mp-apahida-IDDWW2",
+    "title": "Apartament 72mp, semifinisat, cu 3 camere, balcon 7 mp, Apahida",
+    "price": 90000,
+    "location": "Sannicoara",
+    "link": "https://www.storia.ro/ro/oferta/apartament-72mp-semifinisat-cu-3-camere-balcon-7-mp-apahida-IDDWW2",
+    "rooms": "THREE",
+    "area": 73,
+    "terrain": null
   }
 ]
