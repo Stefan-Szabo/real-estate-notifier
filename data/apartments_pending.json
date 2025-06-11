@@ -196,5 +196,27 @@
     "rooms": "THREE",
     "area": 73,
     "terrain": null
+  },
+  {
+    "id": 8156404,
+    "slug": "apartament-de-vanzare-baile-cojocna-IDydQU",
+    "title": "Apartament de vanzare Baile Cojocna",
+    "price": 70000,
+    "location": "Cojocna",
+    "link": "https://www.storia.ro/ro/oferta/apartament-de-vanzare-baile-cojocna-IDydQU",
+    "rooms": "THREE",
+    "area": 72,
+    "terrain": null
+  },
+  {
+    "id": 98156404000,
+    "slug": "apartament-de-vanzare-baile-cojocna-IDydQU",
+    "title": "Apartament de vanzare Baile Cojocna",
+    "price": 70000,
+    "location": "Cojocna",
+    "link": "https://www.storia.ro/ro/oferta/apartament-de-vanzare-baile-cojocna-IDydQU",
+    "rooms": "THREE",
+    "area": 72,
+    "terrain": null
   }
 ]
