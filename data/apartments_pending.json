@@ -218,5 +218,27 @@
     "rooms": "THREE",
     "area": 72,
     "terrain": null
+  },
+  {
+    "id": 9523477,
+    "slug": "apartament-3-camere-60mp-balcon-IDDXut",
+    "title": "Apartament 3 camere, 60mp, balcon",
+    "price": 92000,
+    "location": "Apahida",
+    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-60mp-balcon-IDDXut",
+    "rooms": "THREE",
+    "area": 60,
+    "terrain": null
+  },
+  {
+    "id": 9523492,
+    "slug": "3-camere-cu-balcon-generos-in-apahida-liniste-si-spatiu-IDDXuI",
+    "title": "3 camere cu balcon generos in Apahida, liniste si spatiu",
+    "price": 92000,
+    "location": "Apahida",
+    "link": "https://www.storia.ro/ro/oferta/3-camere-cu-balcon-generos-in-apahida-liniste-si-spatiu-IDDXuI",
+    "rooms": "THREE",
+    "area": 60,
+    "terrain": null
   }
 ]
