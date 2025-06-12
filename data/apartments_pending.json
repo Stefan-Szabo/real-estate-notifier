@@ -251,5 +251,16 @@
     "rooms": "THREE",
     "area": 61,
     "terrain": null
+  },
+  {
+    "id": 9398090,
+    "slug": "apartament-3-camere-de-vanzare-in-dambul-rotund-cluj-napoca-IDDqS6",
+    "title": "Apartament 3 camere de vanzare in Dambul Rotund, Cluj Napoca",
+    "price": 135000,
+    "location": "Cluj-Napoca",
+    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-de-vanzare-in-dambul-rotund-cluj-napoca-IDDqS6",
+    "rooms": "THREE",
+    "area": 70,
+    "terrain": null
   }
 ]
