@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "id": 8619069,
+    "slug": "ansamblu-de-case-tip-duplex-4-camere-116-5mp-garaj-chinteni-IDAadf",
+    "title": "Ansamblu de case tip Duplex, 4 camere, 116.5mp, garaj, Chinteni",
+    "price": 160000,
+    "location": "Chinteni",
+    "link": "https://www.storia.ro/ro/oferta/ansamblu-de-case-tip-duplex-4-camere-116-5mp-garaj-chinteni-IDAadf",
+    "rooms": "FOUR",
+    "area": 116.5,
+    "terrain": 350
+  },
+  {
+    "id": 99470040000,
+    "slug": "iti-doresti-o-casa-finisata-langa-padure-doar-15-min-de-centru-clujulu-IDDJAA",
+    "title": "Iti doresti o casa finisata langa padure doar 15 min de centru Clujulu",
+    "price": 165000,
+    "location": "Baciu",
+    "link": "https://www.storia.ro/ro/oferta/iti-doresti-o-casa-finisata-langa-padure-doar-15-min-de-centru-clujulu-IDDJAA",
+    "rooms": "FOUR",
+    "area": 130,
+    "terrain": 500
+  }
+]
