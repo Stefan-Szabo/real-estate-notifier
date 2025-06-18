@@ -284,5 +284,16 @@
     "rooms": "THREE",
     "area": 70,
     "terrain": null
+  },
+  {
+    "id": 9539604,
+    "slug": "apartament-3-camere-2-bai-2-balcoane-70mp-utili-bloc-nou-apahid-IDE1GA",
+    "title": "Apartament 3 camere, 2 bai, 2 balcoane, 70mp utili – bloc nou Apahid",
+    "price": 108363,
+    "location": "Marasti",
+    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-2-bai-2-balcoane-70mp-utili-bloc-nou-apahid-IDE1GA",
+    "rooms": "THREE",
+    "area": 70.48,
+    "terrain": null
   }
 ]
