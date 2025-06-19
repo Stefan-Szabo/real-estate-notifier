@@ -460,5 +460,16 @@
     "rooms": "FOUR",
     "area": 135,
     "terrain": 500
+  },
+  {
+    "id": 8555802,
+    "slug": "casa-individuala-6-camere-223-mp-utili-350-mp-teren-dezmir-IDzTKO",
+    "title": "Casa individuala 6 camere, 223 mp utili, 350 mp teren, Dezmir",
+    "price": 169000,
+    "location": "Sannicoara",
+    "link": "https://www.storia.ro/ro/oferta/casa-individuala-6-camere-223-mp-utili-350-mp-teren-dezmir-IDzTKO",
+    "rooms": "SIX",
+    "area": 223,
+    "terrain": 350
   }
 ]
