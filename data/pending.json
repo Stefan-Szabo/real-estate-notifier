@@ -438,5 +438,27 @@
     "rooms": "FOUR",
     "area": 146,
     "terrain": 425
+  },
+  {
+    "id": 9541004,
+    "slug": "exclusivitate-casa-semifinisata-in-jucu-de-sus-IDE23a",
+    "title": "EXCLUSIVITATE! Casa semifinisata in Jucu de Sus.",
+    "price": 178999,
+    "location": "Jucu de Mijloc",
+    "link": "https://www.storia.ro/ro/oferta/exclusivitate-casa-semifinisata-in-jucu-de-sus-IDE23a",
+    "rooms": "FOUR",
+    "area": 118.42,
+    "terrain": 475
+  },
+  {
+    "id": 99335318000,
+    "slug": "duplex-de-vanzare-finisat-modern-cu-4-camere-in-popesti-strad-IDDaxE",
+    "title": "Duplex de vanzare | finisat modern | cu  4 camere | in Popesti | strad",
+    "price": 165000,
+    "location": "Popesti",
+    "link": "https://www.storia.ro/ro/oferta/duplex-de-vanzare-finisat-modern-cu-4-camere-in-popesti-strad-IDDaxE",
+    "rooms": "FOUR",
+    "area": 135,
+    "terrain": 500
   }
 ]
