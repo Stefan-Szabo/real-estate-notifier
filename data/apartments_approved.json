@@ -185,5 +185,60 @@
     "rooms": "FOUR",
     "area": 153,
     "terrain": null
+  },
+  {
+    "id": 9458359,
+    "slug": "apartament-3cam-72mp-terasa-10mp-imobil-nou-apahida-IDDGyb",
+    "title": "Apartament 3cam 72mp terasa 10mp, imobil nou Apahida",
+    "price": 122400,
+    "location": "Apahida",
+    "link": "https://www.storia.ro/ro/oferta/apartament-3cam-72mp-terasa-10mp-imobil-nou-apahida-IDDGyb",
+    "rooms": "THREE",
+    "area": 72,
+    "terrain": null
+  },
+  {
+    "id": 9461649,
+    "slug": "apartament-3-camere-decomandat-62-mp-2-balcoane-zona-floresti-IDDHpf",
+    "title": "Apartament 3 camere ,decomandat, 62 mp, 2 balcoane, zona Floresti",
+    "price": 110000,
+    "location": "Andrei Muresanu",
+    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-decomandat-62-mp-2-balcoane-zona-floresti-IDDHpf",
+    "rooms": "THREE",
+    "area": 62,
+    "terrain": null
+  },
+  {
+    "id": 9466849,
+    "slug": "apartament-cu-3-camere-parcare-beta-residence-IDDIL7",
+    "title": "Apartament cu 3 camere, parcare, Beta Residence",
+    "price": 128000,
+    "location": "Cluj-Napoca",
+    "link": "https://www.storia.ro/ro/oferta/apartament-cu-3-camere-parcare-beta-residence-IDDIL7",
+    "rooms": "THREE",
+    "area": 60,
+    "terrain": null
+  },
+  {
+    "id": 9541432,
+    "slug": "3-camere-terasa-100mp-apartament-partial-finisat-IDE2a4",
+    "title": "3 camere + terasa 100mp, apartament partial finisat",
+    "price": 98154,
+    "location": "Marasti",
+    "link": "https://www.storia.ro/ro/oferta/3-camere-terasa-100mp-apartament-partial-finisat-IDE2a4",
+    "rooms": "THREE",
+    "area": 63.84,
+    "terrain": null
+  },
+  {
+    "id": 9541640,
+    "slug": "apartament-3-camere-2-bai-2-balcoane-67mp-utili-bloc-nou-apahid-IDE2dq",
+    "title": "Apartament 3 camere, 2 bai, 2 balcoane, 67mp utili – bloc nou Apahid",
+    "price": 103366,
+    "location": "Marasti",
+    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-2-bai-2-balcoane-67mp-utili-bloc-nou-apahid-IDE2dq",
+    "rooms": "THREE",
+    "area": 67.23,
+    "terrain": null
   }
 ]
