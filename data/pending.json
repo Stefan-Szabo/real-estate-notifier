@@ -31,5 +31,38 @@
     "rooms": "THREE",
     "area": 120,
     "terrain": 500
+  },
+  {
+    "id": 9544579,
+    "slug": "casa-individuala-jucu-de-sus-755mp-teren-IDE2YP",
+    "title": "Casa individuala, Jucu de Sus, 755mp teren",
+    "price": 169000,
+    "location": "Jucu de Sus",
+    "link": "https://www.storia.ro/ro/oferta/casa-individuala-jucu-de-sus-755mp-teren-IDE2YP",
+    "rooms": "FOUR",
+    "area": 112,
+    "terrain": 755
+  },
+  {
+    "id": 9544585,
+    "slug": "casa-individuala-pe-un-nivel-campenesti-3dormitoare-486mp-teren-IDE2YW",
+    "title": "Casa individuala pe un nivel, Campenesti, 3dormitoare, 486mp teren",
+    "price": 170000,
+    "location": "Iris",
+    "link": "https://www.storia.ro/ro/oferta/casa-individuala-pe-un-nivel-campenesti-3dormitoare-486mp-teren-IDE2YW",
+    "rooms": "FOUR",
+    "area": 101,
+    "terrain": 486
+  },
+  {
+    "id": 9544554,
+    "slug": "casa-individuala-in-chinteni-511mp-teren-IDE2Yq",
+    "title": "Casa individuala in Chinteni , 511mp teren",
+    "price": 179000,
+    "location": "Macicasu",
+    "link": "https://www.storia.ro/ro/oferta/casa-individuala-in-chinteni-511mp-teren-IDE2Yq",
+    "rooms": "FOUR",
+    "area": 120,
+    "terrain": 511
   }
 ]
