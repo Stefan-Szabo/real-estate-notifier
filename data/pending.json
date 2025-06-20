@@ -9,5 +9,16 @@
     "rooms": "FOUR",
     "area": 142,
     "terrain": 350
+  },
+  {
+    "id": 9543774,
+    "slug": "casa-duplex-dezmir-117mp-utili-440mp-teren-IDE2LQ",
+    "title": "Casa Duplex, Dezmir, 117mp utili , 440mp teren",
+    "price": 175000,
+    "location": "Dezmir",
+    "link": "https://www.storia.ro/ro/oferta/casa-duplex-dezmir-117mp-utili-440mp-teren-IDE2LQ",
+    "rooms": "FOUR",
+    "area": 117,
+    "terrain": 440
   }
 ]
