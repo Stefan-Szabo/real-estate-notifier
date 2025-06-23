@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "id": 9543756,
+    "slug": "casa-individuala-dezmir-stil-deosebit-IDE2Ly",
+    "title": "Casa individuala , Dezmir, stil deosebit",
+    "price": 162000,
+    "location": "Dezmir",
+    "link": "https://www.storia.ro/ro/oferta/casa-individuala-dezmir-stil-deosebit-IDE2Ly",
+    "rooms": "FOUR",
+    "area": 118,
+    "terrain": 440
+  },
+  {
+    "id": 99508438000,
+    "slug": "casa-tip-duplex-situata-in-chinteni-IDDTzU",
+    "title": "Casa Tip Duplex situata in Chinteni!",
+    "price": 168000,
+    "location": "Chinteni",
+    "link": "https://www.storia.ro/ro/oferta/casa-tip-duplex-situata-in-chinteni-IDDTzU",
+    "rooms": "FOUR",
+    "area": 232,
+    "terrain": 355
+  }
+]
