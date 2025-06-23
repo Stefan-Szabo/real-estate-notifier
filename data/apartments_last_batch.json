@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "id": 9550164,
+    "slug": "de-inchiriat-apartament-3-camere-lux-parcare-subterana-priveliste-IDE4qU",
+    "title": "De inchiriat: apartament 3 camere, LUX, parcare subterana, priveliste!",
+    "price": 1450,
+    "location": "Andrei Muresanu",
+    "link": "https://www.storia.ro/ro/oferta/de-inchiriat-apartament-3-camere-lux-parcare-subterana-priveliste-IDE4qU",
+    "rooms": "THREE",
+    "area": 80,
+    "terrain": null
+  },
+  {
+    "id": 99550164000,
+    "slug": "de-inchiriat-apartament-3-camere-lux-parcare-subterana-priveliste-IDE4qU",
+    "title": "De inchiriat: apartament 3 camere, LUX, parcare subterana, priveliste!",
+    "price": 1450,
+    "location": "Andrei Muresanu",
+    "link": "https://www.storia.ro/ro/oferta/de-inchiriat-apartament-3-camere-lux-parcare-subterana-priveliste-IDE4qU",
+    "rooms": "THREE",
+    "area": 80,
+    "terrain": null
+  }
+]
