@@ -163,5 +163,16 @@
     "rooms": "FOUR",
     "area": 232,
     "terrain": 355
+  },
+  {
+    "id": 9552086,
+    "slug": "casa-individuala-noua-114-mp-teren-755-mp-jucu-de-sus-IDE4WU",
+    "title": "Casa individuala noua, 114 mp, teren 755 mp – Jucu de Sus",
+    "price": 169000,
+    "location": "Jucu de Mijloc",
+    "link": "https://www.storia.ro/ro/oferta/casa-individuala-noua-114-mp-teren-755-mp-jucu-de-sus-IDE4WU",
+    "rooms": "FOUR",
+    "area": 114,
+    "terrain": 755
   }
 ]
