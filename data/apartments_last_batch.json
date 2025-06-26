@@ -1,24 +1,24 @@
 [
   {
-    "id": 9174336,
-    "slug": "apartament-3-camere-100mp-zona-piata-cipariu-IDCuFa",
-    "title": "Apartament 3 camere, 100mp, zona Piata Cipariu",
-    "price": 1100,
-    "location": "Marasti",
-    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-100mp-zona-piata-cipariu-IDCuFa",
+    "id": 9559363,
+    "slug": "apartament-pet-friendly-3-camere-parcare-subterana-IDE6Ph",
+    "title": "Apartament pet friendly, 3 camere, parcare subterana",
+    "price": 650,
+    "location": "Cluj-Napoca",
+    "link": "https://www.storia.ro/ro/oferta/apartament-pet-friendly-3-camere-parcare-subterana-IDE6Ph",
     "rooms": "THREE",
-    "area": 69.2,
+    "area": 61,
     "terrain": null
   },
   {
-    "id": 99174336000,
-    "slug": "apartament-3-camere-100mp-zona-piata-cipariu-IDCuFa",
-    "title": "Apartament 3 camere, 100mp, zona Piata Cipariu",
-    "price": 1100,
-    "location": "Marasti",
-    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-100mp-zona-piata-cipariu-IDCuFa",
+    "id": 99559363000,
+    "slug": "apartament-pet-friendly-3-camere-parcare-subterana-IDE6Ph",
+    "title": "Apartament pet friendly, 3 camere, parcare subterana",
+    "price": 650,
+    "location": "Cluj-Napoca",
+    "link": "https://www.storia.ro/ro/oferta/apartament-pet-friendly-3-camere-parcare-subterana-IDE6Ph",
     "rooms": "THREE",
-    "area": 69.2,
+    "area": 61,
     "terrain": null
   }
 ]
