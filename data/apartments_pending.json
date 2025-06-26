@@ -75,5 +75,27 @@
     "rooms": "THREE",
     "area": 73.2,
     "terrain": null
+  },
+  {
+    "id": 9174336,
+    "slug": "apartament-3-camere-100mp-zona-piata-cipariu-IDCuFa",
+    "title": "Apartament 3 camere, 100mp, zona Piata Cipariu",
+    "price": 1100,
+    "location": "Marasti",
+    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-100mp-zona-piata-cipariu-IDCuFa",
+    "rooms": "THREE",
+    "area": 69.2,
+    "terrain": null
+  },
+  {
+    "id": 99174336000,
+    "slug": "apartament-3-camere-100mp-zona-piata-cipariu-IDCuFa",
+    "title": "Apartament 3 camere, 100mp, zona Piata Cipariu",
+    "price": 1100,
+    "location": "Marasti",
+    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-100mp-zona-piata-cipariu-IDCuFa",
+    "rooms": "THREE",
+    "area": 69.2,
+    "terrain": null
   }
 ]
