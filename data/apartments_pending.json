@@ -119,5 +119,16 @@
     "rooms": "THREE",
     "area": 61,
     "terrain": null
+  },
+  {
+    "id": 9562458,
+    "slug": "apartament-3-cam-et-1-central-apahida-IDE7Dc",
+    "title": "Apartament 3 cam et 1 central Apahida",
+    "price": 85000,
+    "location": "Apahida",
+    "link": "https://www.storia.ro/ro/oferta/apartament-3-cam-et-1-central-apahida-IDE7Dc",
+    "rooms": "THREE",
+    "area": 69,
+    "terrain": null
   }
 ]
