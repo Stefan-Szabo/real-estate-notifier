@@ -130,5 +130,16 @@
     "rooms": "THREE",
     "area": 69,
     "terrain": null
+  },
+  {
+    "id": 9564458,
+    "slug": "apartament-4-camere-untold-6-8-persoane-IDE89s",
+    "title": "Apartament 4 camere Untold 6-8 persoane",
+    "price": 10000,
+    "location": "Cluj-Napoca",
+    "link": "https://www.storia.ro/ro/oferta/apartament-4-camere-untold-6-8-persoane-IDE89s",
+    "rooms": "FOUR",
+    "area": 80,
+    "terrain": null
   }
 ]
