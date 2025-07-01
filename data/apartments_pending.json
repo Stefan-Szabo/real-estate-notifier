@@ -141,5 +141,16 @@
     "rooms": "FOUR",
     "area": 80,
     "terrain": null
+  },
+  {
+    "id": 9568908,
+    "slug": "apartament-de-3-camere-bloc-nou-lift-parcare-dealul-florilor-IDE9je",
+    "title": "Apartament de 3 camere | Bloc nou | Lift + parcare | Dealul Florilor",
+    "price": 115000,
+    "location": "Gruia",
+    "link": "https://www.storia.ro/ro/oferta/apartament-de-3-camere-bloc-nou-lift-parcare-dealul-florilor-IDE9je",
+    "rooms": "THREE",
+    "area": 74,
+    "terrain": null
   }
 ]
