@@ -229,5 +229,27 @@
     "rooms": "FOUR",
     "area": 114,
     "terrain": 755
+  },
+  {
+    "id": 9570395,
+    "slug": "casa-individuala-4-camere-114mp-teren-751mp-parcare-jucu-de-sus-IDE9Hd",
+    "title": "Casa individuala 4 camere, 114mp, teren 751mp, Parcare, Jucu de Sus",
+    "price": 165000,
+    "location": "Jucu de Sus",
+    "link": "https://www.storia.ro/ro/oferta/casa-individuala-4-camere-114mp-teren-751mp-parcare-jucu-de-sus-IDE9Hd",
+    "rooms": "FOUR",
+    "area": 114,
+    "terrain": 751
+  },
+  {
+    "id": 99570395000,
+    "slug": "casa-individuala-4-camere-114mp-teren-751mp-parcare-jucu-de-sus-IDE9Hd",
+    "title": "Casa individuala 4 camere, 114mp, teren 751mp, Parcare, Jucu de Sus",
+    "price": 165000,
+    "location": "Jucu de Sus",
+    "link": "https://www.storia.ro/ro/oferta/casa-individuala-4-camere-114mp-teren-751mp-parcare-jucu-de-sus-IDE9Hd",
+    "rooms": "FOUR",
+    "area": 114,
+    "terrain": 751
   }
 ]
