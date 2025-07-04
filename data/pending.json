@@ -273,5 +273,16 @@
     "rooms": "FIVE",
     "area": 119,
     "terrain": 450
+  },
+  {
+    "id": 7491721,
+    "slug": "cas-individual-baciu-cu-panorama-langa-sungarden-resort-IDwqVd",
+    "title": "Casă individuală Baciu cu panorama - langa SunGarden Resort",
+    "price": 175000,
+    "location": "Baciu",
+    "link": "https://www.storia.ro/ro/oferta/cas-individual-baciu-cu-panorama-langa-sungarden-resort-IDwqVd",
+    "rooms": "EIGHT",
+    "area": 366.58,
+    "terrain": 500
   }
 ]
