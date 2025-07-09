@@ -306,5 +306,16 @@
     "rooms": "FOUR",
     "area": 142,
     "terrain": 350
+  },
+  {
+    "id": 99576177000,
+    "slug": "casa-tip-duplex-parter-etaj-450-mp-de-teren-situata-in-chinteni-IDEbct",
+    "title": "Casa Tip Duplex parter+etaj,450 mp de teren, situata in Chinteni!",
+    "price": 168000,
+    "location": "Chinteni",
+    "link": "https://www.storia.ro/ro/oferta/casa-tip-duplex-parter-etaj-450-mp-de-teren-situata-in-chinteni-IDEbct",
+    "rooms": "FIVE",
+    "area": 119,
+    "terrain": 450
   }
 ]
