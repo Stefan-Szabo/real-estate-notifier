@@ -328,5 +328,27 @@
     "rooms": "FOUR",
     "area": 120,
     "terrain": 400
+  },
+  {
+    "id": 9586392,
+    "slug": "vand-casa-IDEdRe",
+    "title": "Vand casa",
+    "price": 135,
+    "location": "Jucu de Sus",
+    "link": "https://www.storia.ro/ro/oferta/vand-casa-IDEdRe",
+    "rooms": "FIVE",
+    "area": 235,
+    "terrain": 1200
+  },
+  {
+    "id": 99586392000,
+    "slug": "vand-casa-IDEdRe",
+    "title": "Vand casa",
+    "price": 135,
+    "location": "Jucu de Sus",
+    "link": "https://www.storia.ro/ro/oferta/vand-casa-IDEdRe",
+    "rooms": "FIVE",
+    "area": 235,
+    "terrain": 1200
   }
 ]
