@@ -317,5 +317,16 @@
     "rooms": "FIVE",
     "area": 119,
     "terrain": 450
+  },
+  {
+    "id": 9589833,
+    "slug": "casa-individuala-km-17-120-mp-cu-teren-400mp-IDEeKJ",
+    "title": "Casa Individuala Km 17, 120 Mp Cu Teren 400mp",
+    "price": 154000,
+    "location": "Juc-Herghelie",
+    "link": "https://www.storia.ro/ro/oferta/casa-individuala-km-17-120-mp-cu-teren-400mp-IDEeKJ",
+    "rooms": "FOUR",
+    "area": 120,
+    "terrain": 400
   }
 ]
