@@ -174,5 +174,38 @@
     "rooms": "THREE",
     "area": 65,
     "terrain": null
+  },
+  {
+    "id": 9599054,
+    "slug": "apartament-2-camere-60-mp-balcon-7-69-mp-finisat-apahida-IDEh9s",
+    "title": "Apartament 2 camere, 60 mp + balcon 7,69 mp, finisat, Apahida",
+    "price": 84403,
+    "location": "Apahida",
+    "link": "https://www.storia.ro/ro/oferta/apartament-2-camere-60-mp-balcon-7-69-mp-finisat-apahida-IDEh9s",
+    "rooms": "THREE",
+    "area": 60,
+    "terrain": null
+  },
+  {
+    "id": 9599089,
+    "slug": "apartament-3-camere-60-mp-balcon-4-37-mp-finisat-apahida-IDEha1",
+    "title": "Apartament 3 camere, 60 mp + balcon 4,37 mp, finisat, Apahida",
+    "price": 101834,
+    "location": "Apahida",
+    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-60-mp-balcon-4-37-mp-finisat-apahida-IDEha1",
+    "rooms": "THREE",
+    "area": 60,
+    "terrain": null
+  },
+  {
+    "id": 9599013,
+    "slug": "apartament-3-camere-68-mp-gradina-200-mp-apahida-IDEh8N",
+    "title": "Apartament 3 camere, 68 mp + gradina 200 mp – Apahida",
+    "price": 113665,
+    "location": "Apahida",
+    "link": "https://www.storia.ro/ro/oferta/apartament-3-camere-68-mp-gradina-200-mp-apahida-IDEh8N",
+    "rooms": "THREE",
+    "area": 68,
+    "terrain": null
   }
 ]
